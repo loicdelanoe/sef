@@ -1,4 +1,9 @@
 {
     "/js/main.js": "/js/main.js",
-    "/css/main.css": "/css/main.css"
+    "/css/main.css": "/css/main.css",
+    "/img/burger.svg": "/img/burger.svg",
+    "/img/news-1.jpg": "/img/news-1.jpg",
+    "/img/sef-logo.svg": "/img/sef-logo.svg",
+    "/fonts/Raleway-Bold.ttf": "/fonts/Raleway-Bold.ttf",
+    "/fonts/Raleway-Regular.ttf": "/fonts/Raleway-Regular.ttf"
 }

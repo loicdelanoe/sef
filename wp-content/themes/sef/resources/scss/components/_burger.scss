@@ -1,0 +1,43 @@
+.burger {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  z-index: 10;
+
+
+  &__line {
+    transition: .3s;
+    transform-origin: center 0;
+  }
+}
+
+input[id="burger"] {
+  appearance: none;
+  position: absolute;
+  right: 24px;
+  height: 44px;
+  width: 22px;
+  margin: 0;
+  box-sizing: content-box;
+  padding-left: 10px;
+  z-index: 10;
+
+
+  &:checked ~ .nav__container {
+    position: fixed;
+    transform: translateX(0);
+  }
+
+  &:checked ~ .burger .burger__line:nth-child(2) {
+    height: 0;
+  }
+
+  &:checked ~ .burger .burger__line:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  &:checked ~ .burger .burger__line:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+    transform-origin: center 15px;
+  }
+}

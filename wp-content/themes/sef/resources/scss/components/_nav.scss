@@ -1,0 +1,61 @@
+.nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 21px 0;
+  @include side-padding-section;
+
+  &__brand {
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+  }
+
+  &__branding {
+    bottom: 0;
+    display: block;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    text-indent: 101%;
+    top: 0;
+    white-space: nowrap;
+    z-index: 1;
+  }
+
+  &__link {
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    padding: 1.8em;
+    font-size: 1.2em;
+
+    &:after {
+      content: '';
+      width: 0;
+      height: 1px;
+      background-color: $text-color;
+      transition: .3s;
+      margin-top: 2px;
+    }
+
+    &:hover:after,
+    &:focus:after {
+      width: 20px;
+    }
+  }
+
+  &__container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translateX(100%);
+    right: 0;
+    background-color: $white;
+    min-height: 100vh;
+    width: 100%;
+    transition: transform .3s ease;
+  }
+}

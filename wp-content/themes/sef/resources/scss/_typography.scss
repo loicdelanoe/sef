@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Regular.ttf") ;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Bold.ttf") ;
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  color: $text-color;
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 46px;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+  display: inline-block;
+}
+
+a.active {
+  color: $active-text-color;
+
+  &:after {
+    width: 20px;
+    background-color: $active-text-color;
+  }
+}

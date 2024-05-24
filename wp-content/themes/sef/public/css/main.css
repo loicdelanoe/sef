@@ -1,3 +1,212 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
 body {
-  background-color: red;
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.sro {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  /*clip-path: inset(50%);*/
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../fonts/Raleway-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  color: #1B2B39;
+}
+
+h1, h2, h3, h4 {
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 46px;
+}
+
+a {
+  text-decoration: none;
+  color: #1B2B39;
+  display: inline-block;
+}
+
+a.active {
+  color: #265A79;
+}
+a.active:after {
+  width: 20px;
+  background-color: #265A79;
+}
+
+header {
+  display: block;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 21px 0;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+.nav__brand {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+}
+.nav__branding {
+  bottom: 0;
+  display: block;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  text-indent: 101%;
+  top: 0;
+  white-space: nowrap;
+  z-index: 1;
+}
+.nav__link {
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  padding: 1.8em;
+  font-size: 1.2em;
+}
+.nav__link:after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background-color: #1B2B39;
+  transition: 0.3s;
+  margin-top: 2px;
+}
+.nav__link:hover:after, .nav__link:focus:after {
+  width: 20px;
+}
+.nav__container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transform: translateX(100%);
+  right: 0;
+  background-color: #FFFFFF;
+  min-height: 100vh;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.burger {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  z-index: 10;
+}
+.burger__line {
+  transition: 0.3s;
+  transform-origin: center 0;
+}
+
+input[id=burger] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  position: absolute;
+  right: 24px;
+  height: 44px;
+  width: 22px;
+  margin: 0;
+  box-sizing: content-box;
+  padding-left: 10px;
+  z-index: 10;
+}
+input[id=burger]:checked ~ .nav__container {
+  position: fixed;
+  transform: translateX(0);
+}
+input[id=burger]:checked ~ .burger .burger__line:nth-child(2) {
+  height: 0;
+}
+input[id=burger]:checked ~ .burger .burger__line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+input[id=burger]:checked ~ .burger .burger__line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  transform-origin: center 15px;
 }
