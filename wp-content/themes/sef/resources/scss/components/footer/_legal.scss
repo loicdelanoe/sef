@@ -1,0 +1,10 @@
+.legal {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2em;
+  border-top: 1px solid $alt-text-color;
+
+  &__item {
+    margin-bottom: 0.5em;
+  }
+}

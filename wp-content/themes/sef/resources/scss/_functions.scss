@@ -2,3 +2,16 @@
   padding-right: 24px;
   padding-left: 24px;
 }
+
+@mixin background-gradient {
+  z-index: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  background: rgb(25,25,25);
+  background: -moz-linear-gradient(0deg, rgba(25,25,25,1) 0%, rgba(255,255,255,0) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(25,25,25,1) 0%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(0deg, rgba(25,25,25,1) 0%, rgba(255,255,255,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#191919",endColorstr="#ffffff",GradientType=1);
+}

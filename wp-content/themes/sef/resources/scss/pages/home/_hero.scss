@@ -6,13 +6,14 @@
   padding: 103px 0 101px 0;
   @include side-padding-section;
   text-align: center;
-  background-color: $background-color;
+  //background-color: $background-color;
 
   &__image {
     position: absolute;
     inset: 0;
     z-index: -1;
     width: 100%;
+    height: 100%;
     object-fit: cover;
     //max-height: 434px;
   }

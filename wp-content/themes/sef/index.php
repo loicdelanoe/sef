@@ -1,21 +1,23 @@
 <?php get_header() ?>
 
 <main>
-    <section class="hero">
-<!--        --><?php //= wp_get_attachment_image(get_field('background-image'), 'overview_image', false, [
-//                'class' => 'hero__image',
-//        ]) ?>
-        <h2 class="hero__title"><?= get_field('title') ?></h2>
-        <p class="hero__quote"><?= get_field('quote') ?></p>
-        <div class="hero__container">
-            <a href="" class="cta">Faire un don</a>
-            <a href="" class="cta" data-variant="secondary">Nous contacter</a>
-        </div>
-    </section>
+    <div class="container">
+        <?= wp_get_attachment_image(get_field('background-image'), 'overview_image', false, [
+            'class' => 'hero__image',
+        ]) ?>
+        <section class="hero">
+            <h2 class="hero__title"><?= get_field('title') ?></h2>
+            <p class="hero__quote"><?= get_field('quote') ?></p>
+            <div class="hero__container">
+                <a href="" class="cta">Faire un don</a>
+                <a href="" class="cta" data-variant="secondary">Nous contacter</a>
+            </div>
+        </section>
+    </div>
     <section class="news">
         <h2 class="news__title">Nos dernières actualités</h2>
         <article class="newscard">
-            <div class="newscard__container">
+            <div class="newscard__container--last container">
                 <img class="newscard__img--last" src="<?= dw_asset('img/news-1.jpg') ?>" alt="">
                 <h3 class="newscard__title--last">Croissance des Services d'Entraide Familiale : Solidarité au Cœur des Foyers</h3>
             </div>
@@ -53,18 +55,18 @@
         <ul class="testimonials__container">
             <li class="testimonialcard">
                 <p class="testimonialcard__text">Le SEF de Huy m'a aidée à retrouver ma dignité quand j'étais perdue. Grâce à leur soutien, j'ai trouvé un emploi stable et un logement. Merci infiniment pour leur aide précieuse.</p>
-                <h3 class="testimonial__name">Marie</h3>
-                <small class="testimonial__occupation">ancienne résidente</small>
+                <h3 class="testimonialcard__name">Marie</h3>
+                <small class="testimonialcard__occupation">ancienne résidente</small>
             </li>
             <li class="testimonialcard">
                 <p class="testimonialcard__text">Le SEF de Huy m'a aidée à retrouver ma dignité quand j'étais perdue. Grâce à leur soutien, j'ai trouvé un emploi stable et un logement. Merci infiniment pour leur aide précieuse.</p>
-                <h3 class="testimonial__name">Marie</h3>
-                <small class="testimonial__occupation">ancienne résidente</small>
+                <h3 class="testimonialcard__name">Marie</h3>
+                <small class="testimonialcard__occupation">ancienne résidente</small>
             </li>
             <li class="testimonialcard">
                 <p class="testimonialcard__text">Le SEF de Huy m'a aidée à retrouver ma dignité quand j'étais perdue. Grâce à leur soutien, j'ai trouvé un emploi stable et un logement. Merci infiniment pour leur aide précieuse.</p>
-                <h3 class="testimonial__name">Marie</h3>
-                <small class="testimonial__occupation">ancienne résidente</small>
+                <h3 class="testimonialcard__name">Marie</h3>
+                <small class="testimonialcard__occupation">ancienne résidente</small>
             </li>
         </ul>
     </section>
@@ -72,7 +74,7 @@
         <h2 class="contact__title">Votre générosité nous permet d’avancer</h2>
         <div class="contact__container">
             <a href="" class="cta">Nous soutenir</a>
-            <a href="" class="cta">Nous contacter</a>
+            <a href="" class="cta" data-variant="tertiary">Nous contacter</a>
         </div>
     </section>
 </main>

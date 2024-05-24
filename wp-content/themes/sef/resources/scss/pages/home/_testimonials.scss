@@ -1,0 +1,16 @@
+.testimonials {
+  padding: 45px 0;
+  @include side-padding-section;
+
+  &__title {
+    text-align: center;
+
+  }
+
+  &__container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+  }
+}

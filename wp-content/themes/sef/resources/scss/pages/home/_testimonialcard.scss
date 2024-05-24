@@ -1,0 +1,27 @@
+.testimonialcard {
+  display: flex;
+  flex-direction: column;
+  min-width: 272px;
+  padding: 45px 24px;
+  background-color: $card-color;
+  border-radius: 10px;
+  scroll-snap-align: start;
+
+  &:before {
+    display: block;
+    content: url("../img/quote.svg");
+    width: 51px;
+    height: auto;
+    margin-bottom: 2em;
+  }
+
+  &__text {
+    margin-bottom: 1.8em;
+  }
+
+  &__name {
+    padding-top: 1em;
+    border-top: 1px solid $text-color;
+    font-size: 1.2em;
+  }
+}

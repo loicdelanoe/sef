@@ -25,6 +25,8 @@ h1, h2, h3, h4 {
 
 h2 {
   font-size: 31px;
+  margin-bottom: 1em;
+  text-align: center;
 }
 
 a {
@@ -35,6 +37,7 @@ a {
 
 a.active {
   color: $active-text-color;
+  font-weight: bold;
 
   &:after {
     width: 20px;

@@ -1,0 +1,7 @@
+.container {
+  position: relative;
+
+  &:before {
+    @include background-gradient;
+  }
+}

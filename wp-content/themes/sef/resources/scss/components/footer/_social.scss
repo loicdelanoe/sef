@@ -1,0 +1,18 @@
+.social {
+  &__item {
+
+  }
+
+  &__link {
+    overflow: hidden;
+    width: 38px;
+    line-height: 38px;
+    border: 1px solid $alt-text-color;
+    border-radius: 5px;
+    text-align: center;
+
+    &:after {
+      content: "F";
+    }
+  }
+}

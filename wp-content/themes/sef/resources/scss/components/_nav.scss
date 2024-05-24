@@ -28,8 +28,8 @@
     box-sizing: content-box;
     display: flex;
     flex-direction: column;
-    padding: 1.8em;
-    font-size: 1.2em;
+    padding: 1.4em;
+    font-size: 1.5em;
 
     &:after {
       content: '';
@@ -48,7 +48,7 @@
 
   &__container {
     z-index: 9;
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     justify-content: center;

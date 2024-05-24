@@ -5,9 +5,16 @@
   color: $cta-text-color;
   padding: 15px 15px;
   font-weight: bold;
+  text-align: center;
 
   &[data-variant="secondary"] {
     border: 1px solid $alt-cta-background-color;
+    background-color: transparent;
+  }
+
+  &[data-variant="tertiary"] {
+    border: 1px solid $cta-background-color;
+    color: $alt-cta-text-color;
     background-color: transparent;
   }
 }

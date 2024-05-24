@@ -3,13 +3,24 @@
 @import 'typography';
 @import 'functions';
 
+@import 'components/container';
 @import 'components/bg';
 @import 'components/cta';
 
 @import 'components/header';
 @import 'components/nav';
 @import 'components/burger';
+@import 'components/footer/footer';
+@import 'components/footer/social';
+@import 'components/footer/list';
+@import 'components/footer/legal';
 
 @import 'pages/home/hero';
 @import 'pages/home/news';
 @import 'pages/home/newscard';
+@import 'pages/home/statistics';
+@import 'pages/home/statcard';
+@import 'pages/home/testimonials';
+@import 'pages/home/testimonialcard';
+@import 'pages/home/contact';
+@import 'pages/home/contact';

@@ -1,0 +1,26 @@
+.footer {
+  position: relative;
+  padding: 35px 0;
+  @include side-padding-section;
+
+  &__brand {
+    position: relative;
+    margin-bottom: 1em;
+  }
+
+  &__quote {
+    margin-bottom: 1.5em;
+  }
+
+  &__subtitle {
+    margin-bottom: 1em;
+  }
+
+  &__container {
+    margin-bottom: 35px;
+  }
+
+  &__upper {
+    margin-bottom: 2em;
+  }
+}
