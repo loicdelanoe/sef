@@ -2,20 +2,22 @@
 
 <main>
     <section class="hero">
-        <?= wp_get_attachment_image(get_field('background-image'), 'overview_image', false) ?>
+<!--        --><?php //= wp_get_attachment_image(get_field('background-image'), 'overview_image', false, [
+//                'class' => 'hero__image',
+//        ]) ?>
         <h2 class="hero__title"><?= get_field('title') ?></h2>
         <p class="hero__quote"><?= get_field('quote') ?></p>
         <div class="hero__container">
             <a href="" class="cta">Faire un don</a>
-            <a href="" class="cta">Nous contacter</a>
+            <a href="" class="cta" data-variant="secondary">Nous contacter</a>
         </div>
     </section>
     <section class="news">
         <h2 class="news__title">Nos dernières actualités</h2>
         <article class="newscard">
             <div class="newscard__container">
-                <img class="newscard__img" src="<?= dw_asset('img/news-1.jpg') ?>" alt="">
-                <h3 class="newscard__title">Croissance des Services d'Entraide Familiale : Solidarité au Cœur des Foyers</h3>
+                <img class="newscard__img--last" src="<?= dw_asset('img/news-1.jpg') ?>" alt="">
+                <h3 class="newscard__title--last">Croissance des Services d'Entraide Familiale : Solidarité au Cœur des Foyers</h3>
             </div>
             <a class="newscard__link" href="">Visiter l'article</a>
         </article>

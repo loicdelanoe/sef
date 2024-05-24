@@ -1,0 +1,34 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 103px 0 101px 0;
+  @include side-padding-section;
+  text-align: center;
+  background-color: $background-color;
+
+  &__image {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    object-fit: cover;
+    //max-height: 434px;
+  }
+
+  &__title {
+    color: $alt-text-color;
+    margin-bottom: 0.6em;
+  }
+
+  &__quote {
+    color: $alt-text-color;
+    margin-bottom: 1.6em;
+  }
+
+  &__container {
+    display: flex;
+    gap: 10px;
+  }
+}

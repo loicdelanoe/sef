@@ -1,0 +1,13 @@
+.cta {
+  border-radius: 6px;
+  background-color: $cta-background-color;
+  border: 1px solid $cta-background-color;
+  color: $cta-text-color;
+  padding: 15px 15px;
+  font-weight: bold;
+
+  &[data-variant="secondary"] {
+    border: 1px solid $alt-cta-background-color;
+    background-color: transparent;
+  }
+}

@@ -69,6 +69,10 @@ table {
   box-sizing: border-box;
 }
 
+img {
+  display: block;
+}
+
 @font-face {
   font-family: "Raleway";
   src: url("../fonts/Raleway-Regular.ttf");
@@ -93,7 +97,7 @@ h1, h2, h3, h4 {
 }
 
 h2 {
-  font-size: 46px;
+  font-size: 31px;
 }
 
 a {
@@ -108,6 +112,26 @@ a.active {
 a.active:after {
   width: 20px;
   background-color: #265A79;
+}
+
+.bg {
+  background-color: #1B2B39;
+}
+.bg * {
+  color: #F3F9FE;
+}
+
+.cta {
+  border-radius: 6px;
+  background-color: #265A79;
+  border: 1px solid #265A79;
+  color: #F3F9FE;
+  padding: 15px 15px;
+  font-weight: bold;
+}
+.cta[data-variant=secondary] {
+  border: 1px solid #F3F9FE;
+  background-color: transparent;
 }
 
 header {
@@ -160,6 +184,7 @@ header {
   width: 20px;
 }
 .nav__container {
+  z-index: 9;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -209,4 +234,89 @@ input[id=burger]:checked ~ .burger .burger__line:nth-child(1) {
 input[id=burger]:checked ~ .burger .burger__line:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
   transform-origin: center 15px;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 103px 0 101px 0;
+  padding-right: 24px;
+  padding-left: 24px;
+  text-align: center;
+  background-color: #1B2B39;
+}
+.hero__image {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero__title {
+  color: #F3F9FE;
+  margin-bottom: 0.6em;
+}
+.hero__quote {
+  color: #F3F9FE;
+  margin-bottom: 1.6em;
+}
+.hero__container {
+  display: flex;
+  gap: 10px;
+}
+
+.news {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 45px 0;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+.news__title {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.newscard {
+  position: relative;
+  margin-bottom: 1em;
+}
+.newscard__container {
+  position: relative;
+}
+.newscard__img {
+  width: 100%;
+  height: 159px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.6em;
+}
+.newscard__img--last {
+  width: 100%;
+  height: 272px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+.newscard__title {
+  position: relative;
+}
+.newscard__title--last {
+  position: absolute;
+  bottom: 24px;
+  right: 15px;
+  left: 15px;
+  font-size: 22px;
+  color: #F3F9FE;
+}
+.newscard__link {
+  text-indent: -999px;
+  overflow: hidden;
+  position: absolute;
+  inset: 0;
 }

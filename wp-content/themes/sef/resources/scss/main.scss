@@ -3,6 +3,13 @@
 @import 'typography';
 @import 'functions';
 
+@import 'components/bg';
+@import 'components/cta';
+
 @import 'components/header';
 @import 'components/nav';
 @import 'components/burger';
+
+@import 'pages/home/hero';
+@import 'pages/home/news';
+@import 'pages/home/newscard';
