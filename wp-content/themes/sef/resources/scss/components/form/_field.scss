@@ -1,0 +1,25 @@
+.field {
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    font-weight: bold;
+    padding-bottom: 0.8em;
+
+    &[data-required="true"]:after {
+      content: " *";
+      color: $red;
+    }
+  }
+
+  &__input, &__textarea {
+    border: none;
+    background-color: $input-color;
+    padding: 0.8em 1em;
+    border-radius: 5px;
+    margin-bottom: 1.6em;
+    font-size: 1em;
+  }
+}

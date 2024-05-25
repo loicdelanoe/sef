@@ -1,13 +1,11 @@
-.contact {
+.history {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  padding: 90px 0;
+  padding: 45px 0;
   @include side-padding-section;
 
-  &__container {
-    display: flex;
-    gap: 10px;
+  &__image {
+    margin-bottom: 1.4em;
   }
 }

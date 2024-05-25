@@ -14,17 +14,17 @@
             <div class="footer__container">
                 <h3 class="footer__subtitle">Coordonnées</h3>
                 <ul class="footer__list list">
-                    <li class="list__item">Rue du Marché 33 4500 HUY</li>
                     <li class="list__item">085 / 21 57 52</li>
                     <li class="list__item">contact@sefasbl.com</li>
+                    <li class="list__item">Rue du Marché 33 4500 HUY</li>
                 </ul>
             </div>
             <div class="footer__container">
                 <h3 class="footer__subtitle">Nous soutenir</h3>
                 <ul class="footer__list list">
-                    <li class="list__item">Dons matériels</li>
-                    <li class="list__item">Dons financiers</li>
-                    <li class="list__item">Devenir bénévole</li>
+                    <li class="list__item"><a href="<?= home_url("/nous-soutenir/#material") ?>" class="list__link">Dons matériels</a></li>
+                    <li class="list__item"><a href="<?= home_url("/nous-soutenir/#financial") ?>" class="list__link">Dons financiers</a></li>
+                    <li class="list__item"><a href="<?= home_url("/nous-soutenir/#volunteer") ?>" class="list__link">Devenir bénévole</a></li>
                 </ul>
             </div>
             <nav class="footer__nav">
@@ -37,10 +37,10 @@
                 </ul>
             </nav>
         </div>
-        <div class="footer__lower legal">
-            <ul class="legal__container">
-                <li class="legal__item">© 2024 SEF. Tous droits réservés.</li>
-                <li class="legal__item"><a class="legal__link" href="">Mentions légales</a></li>
+        <div class="footer__lower juridic">
+            <ul class="juridic__container">
+                <li class="juridic__item">© 2024 SEF. Tous droits réservés.</li>
+                <li class="juridic__item"><a class="juridic__link" href="<?= home_url("mentions-legales") ?>">Mentions légales</a></li>
             </ul>
         </div>
 

@@ -1,0 +1,12 @@
+.volunteer {
+  display: flex;
+  flex-direction: column;
+  padding: 90px 0;
+  @include side-padding-section;
+  align-items: center;
+  text-align: center;
+
+  &__text {
+    margin-bottom: 1.4em;
+  }
+}

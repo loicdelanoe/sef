@@ -1,0 +1,32 @@
+.more {
+  display: flex;
+  flex-direction: column;
+  padding: 45px 0;
+  @include side-padding-section;
+
+  &__title {
+    text-align: left;
+  }
+
+  &__text {
+    margin-bottom: 1.8em;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    width: 100%;
+    padding: 1em 0;
+    font-size: 1.2em;
+    border-bottom: 1px solid $alt-border-color;
+    display: flex;
+    justify-content: space-between;
+
+    &:after {
+      content: url("../img/arrow.svg");
+    }
+  }
+}

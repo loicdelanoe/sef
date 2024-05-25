@@ -25,6 +25,7 @@
 
     &--last {
       width: 100%;
+      min-height: 272px;
       height: auto;
       object-fit: cover;
       border-radius: 10px;
@@ -46,8 +47,6 @@
   }
 
   &__link {
-    text-indent: -999px;
-    overflow: hidden;
     position: absolute;
     inset: 0;
   }

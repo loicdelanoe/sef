@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="<?= get_bloginfo('description') ?>">
+    <link rel="canonical" href="<?= dw_get_canonical_url() ?>">
     <link rel="stylesheet" href="<?= dw_asset('css/main.css') ?>">
     <title>SEF Huy</title>
 </head>
@@ -17,9 +19,10 @@
             <a class="nav__branding" href="<?= home_url() ?>" title="Vers la page d'accueil">Accueil</a>
             <img src="<?= dw_asset('img/sef-logo.svg') ?>" alt="Logo de l'asbl SEF">
         </div>
-        <input type="checkbox" name="burger" id="burger">
+        <input type="checkbox" name="burger" id="burger" tabindex="0">
         <label class="burger" for="burger">
-            <svg class="burger__container" width="22" height="22" viewBox="0 0 22 17" xmlns="http://www.w3.org/2000/svg">
+            <span class="sro">Menu</span>
+            <svg class="burger__container" focusable="false" aria-hidden="true" width="22" height="22" viewBox="0 0 22 17" xmlns="http://www.w3.org/2000/svg">
                 <rect class="burger__line" width="22" height="2" fill="#265A79"/>
                 <rect class="burger__line" y="6.75" width="22" height="2" fill="#265A79"/>
                 <rect class="burger__line" y="13.5" width="22" height="2" fill="#265A79"/>

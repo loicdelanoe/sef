@@ -1,0 +1,18 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  padding: 45px 0;
+  @include side-padding-section;
+
+  &__container {
+    margin-bottom: 1.4em;
+  }
+
+  &__text {
+    margin-bottom: 1.4em;
+  }
+
+  &__link {
+    text-decoration: underline;
+  }
+}

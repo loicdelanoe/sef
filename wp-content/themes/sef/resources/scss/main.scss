@@ -4,6 +4,7 @@
 @import 'functions';
 
 @import 'components/container';
+@import 'components/wysiwyg';
 @import 'components/bg';
 @import 'components/cta';
 
@@ -13,7 +14,7 @@
 @import 'components/footer/footer';
 @import 'components/footer/social';
 @import 'components/footer/list';
-@import 'components/footer/legal';
+@import 'components/footer/juridic';
 
 @import 'pages/home/hero';
 @import 'pages/home/news';
@@ -22,5 +23,26 @@
 @import 'pages/home/statcard';
 @import 'pages/home/testimonials';
 @import 'pages/home/testimonialcard';
-@import 'pages/home/contact';
-@import 'pages/home/contact';
+@import 'pages/home/help';
+
+@import 'pages/about/mission';
+@import 'pages/about/history';
+@import 'pages/about/more';
+
+@import 'pages/support/support';
+@import 'pages/support/material';
+@import 'pages/support/financial';
+@import 'pages/support/volunteer';
+
+@import 'pages/contact/contact';
+@import 'pages/contact/contactform';
+@import 'components/form/form';
+@import 'components/form/field';
+@import 'pages/contact/location';
+
+@import 'pages/single-news/article';
+@import 'pages/single-news/other';
+
+@import 'pages/news/articles';
+
+@import 'pages/legal/legal';

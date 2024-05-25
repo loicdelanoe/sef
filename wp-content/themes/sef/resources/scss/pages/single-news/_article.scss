@@ -1,0 +1,26 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  padding: 45px 0;
+  @include side-padding-section;
+
+  &__title {
+    text-align: left;
+  }
+
+  &__image {
+    object-fit: contain;
+    height: auto;
+    margin-bottom: 1.4em;
+  }
+
+  &__author {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 0.3em;
+  }
+
+  &__date {
+    margin-bottom: 1.4em;
+  }
+}

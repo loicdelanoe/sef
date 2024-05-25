@@ -44,3 +44,29 @@ a.active {
     background-color: $active-text-color;
   }
 }
+
+strong {
+  font-weight: bold;
+}
+
+dt {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 0.3em;
+}
+
+dd {
+  margin-bottom: 1em;
+}
+
+input, textarea, button {
+  font-size: inherit;
+  font-family: inherit;
+}
+
+/* TODO : A DEPLACER */
+img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}

@@ -6,6 +6,11 @@
   &__brand {
     position: relative;
     margin-bottom: 1em;
+
+    img {
+      width: auto;
+      border-radius: 0;
+    }
   }
 
   &__quote {

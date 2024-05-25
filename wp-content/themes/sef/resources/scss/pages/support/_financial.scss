@@ -1,0 +1,14 @@
+.financial {
+  display: flex;
+  flex-direction: column;
+  padding: 45px 0;
+  @include side-padding-section;
+
+  &__title {
+    text-align: left;
+  }
+
+  &__content {
+    margin-bottom: 1.2em;
+  }
+}
