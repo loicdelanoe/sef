@@ -3,8 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 103px 0 101px 0;
-  @include side-padding-section;
+  padding: 103px 24px 101px 24px;
   text-align: center;
 
   &__image {
@@ -38,5 +37,14 @@
     padding-top: 150px;
     padding-bottom: 150px;
   }
+}
 
+@media screen and (min-width: 1024px) {
+  .hero {
+    padding: 190px 24px;
+
+    &__quote {
+      max-width: 436px;
+    }
+  }
 }

@@ -1,4 +1,7 @@
 .cta {
+  display: flex;
+  gap: 0.5em;
+  position: relative;
   border-radius: 6px;
   background-color: $cta-background-color;
   border: 1px solid $cta-background-color;
@@ -6,15 +9,57 @@
   padding: 15px 15px;
   font-weight: bold;
   text-align: center;
+  transition: .3s;
+
+  &:after {
+    content: "\ea3c";
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: .3s;
+  }
+
+  &:hover:after {
+      transform: translateX(5px);
+  }
+
+  &:hover {
+    background-color: $text-color;
+    border-color: $text-color;
+  }
 
   &[data-variant="secondary"] {
     border: 1px solid $alt-cta-background-color;
     background-color: transparent;
+
+    &:hover {
+      background-color: $cta-text-color;
+      color: $alt-cta-text-color;
+    }
   }
 
   &[data-variant="tertiary"] {
     border: 1px solid $cta-background-color;
     color: $alt-cta-text-color;
     background-color: transparent;
+
+    &:hover {
+      background-color: $alt-cta-text-color;
+      color: $cta-text-color;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .cta {
+    padding: 20px 25px;
   }
 }

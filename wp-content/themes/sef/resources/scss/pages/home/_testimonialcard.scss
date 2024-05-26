@@ -35,3 +35,10 @@
     min-width: 30rem;
   }
 }
+
+@media screen and (min-width: $laptop){
+  .testimonialcard {
+    padding: 45px 35px;
+    min-height: 458px;
+  }
+}

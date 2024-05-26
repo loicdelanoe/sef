@@ -27,7 +27,7 @@
             ]);
 
             if ($last_post->have_posts()): while ($last_post->have_posts()): $last_post->the_post(); ?>
-                <article class="newscard" itemprop="publishingPrinciples" itemscope itemtype="https://schema.org/Article">
+                <article class="newscard--last" itemprop="publishingPrinciples" itemscope itemtype="https://schema.org/Article">
                     <div class="newscard__container--last">
                         <?= wp_get_attachment_image(get_field('image'), 'full', false, [
                             'class' => 'newscard__img--last'

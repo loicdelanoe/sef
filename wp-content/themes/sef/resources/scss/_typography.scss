@@ -14,6 +14,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.ttf?46fvgv') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
 body {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   color: $text-color;
@@ -25,8 +33,9 @@ h1, h2, h3, h4 {
 
 h2 {
   font-size: 31px;
-  margin-bottom: 1em;
+  margin: 0 auto 1em auto;
   text-align: center;
+  max-width: 716px;
 }
 
 a {
@@ -64,9 +73,15 @@ input, textarea, button {
   font-family: inherit;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: $tablet){
   h2 {
     font-size: 42px;
+  }
+}
+
+@media screen and (min-width: $laptop){
+  h2 {
+    font-size: 46px;
   }
 }
 

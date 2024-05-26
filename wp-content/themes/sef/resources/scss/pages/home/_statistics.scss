@@ -1,8 +1,6 @@
 .statistics {
   position: relative;
-  padding: 45px 0;
   text-align: center;
-  @include side-padding-section;
 }
 
 @media screen and (min-width: $tablet) {
@@ -12,6 +10,14 @@
       display: flex;
       justify-content: center;
       gap: 5em;
+    }
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .statistics {
+    &__container {
+      justify-content: space-evenly;
     }
   }
 }

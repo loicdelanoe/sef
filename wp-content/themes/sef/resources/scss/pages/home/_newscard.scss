@@ -2,6 +2,11 @@
   position: relative;
   margin-bottom: 1em;
 
+  &--last {
+    position: relative;
+    margin-bottom: 1em;
+  }
+
   &__container {
     position: relative;
 
@@ -48,5 +53,27 @@
   &__link {
     position: absolute;
     inset: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .newscard {
+    &--last {
+      position: relative;
+      margin-bottom: 0;
+      max-width: 50%;
+    }
+
+    &__container {
+      &--last {
+        height: 100%;
+      }
+    }
+
+    &__img {
+      &--last {
+        height: 100%;
+      }
+    }
   }
 }

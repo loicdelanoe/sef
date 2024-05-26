@@ -2,8 +2,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 45px 0;
-  @include side-padding-section;
 
   &__title {
     text-align: center;
@@ -18,6 +16,24 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 0.8em;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .news {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__title {
+      flex: 0 0 100%;
+    }
+
+    &__container {
+      &--grid {
+        width: 49%;
       }
     }
   }

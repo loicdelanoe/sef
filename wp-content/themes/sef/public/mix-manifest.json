@@ -1,6 +1,5 @@
 {
     "/js/main.js": "/js/main.js",
-    "/css/main.css": "/css/main.css",
     "/img/arrow.svg": "/img/arrow.svg",
     "/img/burger.svg": "/img/burger.svg",
     "/img/mission-thumbnail.jpg": "/img/mission-thumbnail.jpg",
@@ -9,5 +8,7 @@
     "/img/sef-logo-alt.svg": "/img/sef-logo-alt.svg",
     "/img/sef-logo.svg": "/img/sef-logo.svg",
     "/fonts/Raleway-Bold.ttf": "/fonts/Raleway-Bold.ttf",
-    "/fonts/Raleway-Regular.ttf": "/fonts/Raleway-Regular.ttf"
+    "/fonts/Raleway-Regular.ttf": "/fonts/Raleway-Regular.ttf",
+    "/fonts/icomoon.ttf": "/fonts/icomoon.ttf",
+    "/css/main.css": "/css/main.css"
 }

@@ -13,3 +13,11 @@
     max-width: 150px;
   }
 }
+
+@media screen and (min-width: $laptop){
+  .statcard {
+    &__number {
+      font-size: 72px;
+    }
+  }
+}

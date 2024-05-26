@@ -42,3 +42,21 @@
     }
   }
 }
+
+@media screen and (min-width: $laptop) {
+  .footer {
+    padding: 60px;
+    &__upper {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__container {
+      &--nav {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10em;
+      }
+    }
+  }
+}

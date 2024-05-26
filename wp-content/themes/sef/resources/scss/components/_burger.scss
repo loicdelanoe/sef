@@ -45,3 +45,9 @@ input[id="burger"] {
     transform-origin: center 15px;
   }
 }
+
+@media screen and (min-width: $laptop) {
+  .burger, input[id="burger"] {
+    display: none;
+  }
+}

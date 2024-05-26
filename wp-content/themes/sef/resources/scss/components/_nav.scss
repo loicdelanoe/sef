@@ -2,8 +2,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  padding: 21px 0;
-  @include side-padding-section;
+  padding: 21px 24px;
 
   &__brand {
     display: inline-block;
@@ -62,5 +61,30 @@
     min-height: 100vh;
     width: 100%;
     transition: transform .3s ease;
+  }
+}
+
+@media screen and (min-width: $laptop){
+  .nav {
+    align-items: center;
+    justify-content: space-between;
+
+    &__container {
+      justify-content: normal;
+      position: initial;
+      transform: none;
+      flex-direction: row;
+      min-height: auto;
+      width: auto;
+    }
+
+    &__link {
+      font-size: 1.1em;
+      padding: 1em;
+
+      &--alt {
+        margin-left: 1.5em;
+      }
+    }
   }
 }
