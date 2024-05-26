@@ -12,3 +12,27 @@
     margin-bottom: 1.2em;
   }
 }
+
+@media screen and (min-width: $tablet){
+  .financial {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &__title {
+      flex: 0 0 100%;
+      order: 0;
+    }
+
+    &__content, &__image {
+      flex-basis: 48%;
+      margin: 0;
+
+    }
+
+    &__content {
+      order: 1;
+    }
+  }
+}

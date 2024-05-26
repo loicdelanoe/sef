@@ -4,3 +4,14 @@
   text-align: center;
   @include side-padding-section;
 }
+
+@media screen and (min-width: $tablet) {
+  .statistics {
+
+    &__container {
+      display: flex;
+      justify-content: center;
+      gap: 5em;
+    }
+  }
+}

@@ -9,3 +9,22 @@
     margin-bottom: 1.4em;
   }
 }
+
+@media screen and (min-width: $tablet){
+  .history {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &__title {
+      flex: 0 0 100%;
+    }
+
+    &__content, &__image {
+      flex-basis: 48%;
+      margin: 0;
+    }
+  }
+}

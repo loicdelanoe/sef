@@ -6,18 +6,20 @@
           content="width=device-width initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="<?= get_bloginfo('description') ?>">
+    <meta name="keywords" content="aide sociale, soutien aux sans-abri, réinsertion professionnelle, SEF Huy, dons matériels, bénévolat, précarité, exclusion sociale, collecte de dons, aide psychologique, hébergement d'urgence, formation, ateliers, aide administrative, service d'entraide, communauté solidaire, Huy, soutien aux vulnérables, dépôt de dons, seconde main, bénévoles, réinsertion sociale, aide humanitaire, aide aux démunis, services sociaux, soutien local, associations caritatives, solidarité, engagement bénévole">
+    <link rel="shortcut icon" href="<?= get_site_icon_url(); ?>" />
     <link rel="canonical" href="<?= dw_get_canonical_url() ?>">
     <link rel="stylesheet" href="<?= dw_asset('css/main.css') ?>">
     <title>SEF Huy</title>
 </head>
-<body>
+<body itemscope itemtype="https://schema.org/Organization">
 <h1 class="sro"><?= get_the_title() ?></h1>
 <header>
     <nav class="nav" aria-label="Menu principal">
         <h2 class="sro">Navigation principale</h2>
         <div class="nav__brand">
-            <a class="nav__branding" href="<?= home_url() ?>" title="Vers la page d'accueil">Accueil</a>
-            <img src="<?= dw_asset('img/sef-logo.svg') ?>" alt="Logo de l'asbl SEF">
+            <a class="nav__branding" href="<?= home_url() ?>" title="Vers la page d'accueil"><span itemprop="name">SEF</span></a>
+            <img src="<?= dw_asset('img/sef-logo.svg') ?>" alt="Logo de l'asbl SEF" width="70" height="41">
         </div>
         <input type="checkbox" name="burger" id="burger" tabindex="0">
         <label class="burger" for="burger">

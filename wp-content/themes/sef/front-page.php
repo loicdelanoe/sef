@@ -7,7 +7,7 @@
             ]) ?>
             <section class="hero">
                 <h2 class="hero__title"><?= get_field('title') ?></h2>
-                <p class="hero__quote"><?= get_field('quote') ?></p>
+                <p class="hero__quote" itemprop="description"><?= get_field('quote') ?></p>
                 <div class="hero__container">
                     <a href="<?= home_url('/nous-soutenir') ?>" class="cta">Faire un don</a>
                     <a href="<?= home_url('/contact') ?>" class="cta" data-variant="secondary">Nous contacter</a>
@@ -27,36 +27,38 @@
             ]);
 
             if ($last_post->have_posts()): while ($last_post->have_posts()): $last_post->the_post(); ?>
-                <article class="newscard">
+                <article class="newscard" itemprop="publishingPrinciples" itemscope itemtype="https://schema.org/Article">
                     <div class="newscard__container--last">
                         <?= wp_get_attachment_image(get_field('image'), 'full', false, [
                             'class' => 'newscard__img--last'
                         ]) ?>
-                        <h3 class="newscard__title--last"><?= get_the_title() ?></h3>
+                        <h3 class="newscard__title--last" itemprop="headline"><?= get_the_title() ?></h3>
                     </div>
                     <a class="newscard__link" href="<?= get_permalink() ?>"><span class="sro">Visiter l'article</span></a>
                 </article>
             <?php endwhile; endif; ?>
-            <?php
-            $posts = new WP_Query([
-                'post_type' => 'post',
-                'post_status' => 'publish',
-                'offset' => 1,
-                'orderby' => 'date',
-                'order' => 'DESC',
-            ]);
+            <div class="news__container--grid">
+                <?php
+                $posts = new WP_Query([
+                    'post_type' => 'post',
+                    'post_status' => 'publish',
+                    'offset' => 1,
+                    'orderby' => 'date',
+                    'order' => 'DESC',
+                ]);
 
-            if ($posts->have_posts()): while ($posts->have_posts()): $posts->the_post(); ?>
-                <article class="newscard">
-                    <div class="newscard__container">
-                        <?= wp_get_attachment_image(get_field('image'), 'full', false, [
-                            'class' => 'newscard__img'
-                        ]) ?>
-                        <h3 class="newscard__title"><?= get_the_title() ?></h3>
-                    </div>
-                    <a class="newscard__link" href="<?= get_permalink() ?>"><span class="sro">Visiter l'article</span></a>
-                </article>
-            <?php endwhile; endif; ?>
+                if ($posts->have_posts()): while ($posts->have_posts()): $posts->the_post(); ?>
+                    <article class="newscard" itemprop="publishingPrinciples" itemscope itemtype="https://schema.org/Article">
+                        <div class="newscard__container">
+                            <?= wp_get_attachment_image(get_field('image'), 'full', false, [
+                                'class' => 'newscard__img'
+                            ]) ?>
+                            <h3 class="newscard__title" itemprop="headline"><?= get_the_title() ?></h3>
+                        </div>
+                        <a class="newscard__link" href="<?= get_permalink() ?>"><span class="sro">Visiter l'article</span></a>
+                    </article>
+                <?php endwhile; endif; ?>
+            </div>
         </section>
         <div class="bg">
             <section class="statistics">
@@ -83,7 +85,7 @@
                 </ul>
             </section>
         </div>
-        <section class="testimonials">
+        <section class="testimonials" itemprop="review" itemscope itemtype="https://schema.org/Review">
             <h2 class="testimonials__title">Témoignages</h2>
             <ul class="testimonials__container">
                 <?php
@@ -97,10 +99,10 @@
                 if ($testimonials->have_posts()): while ($testimonials->have_posts()): $testimonials->the_post();
                     ?>
 
-                    <li class="testimonialcard">
+                    <li class="testimonialcard" itemprop="reviewBody">
                         <p class="testimonialcard__text"><?= get_field('testimonial') ?></p>
                         <div class="testimonialcard__container">
-                            <h3 class="testimonialcard__name"><?= get_field('name') ?></h3>
+                            <h3 class="testimonialcard__name" itemprop="author"><?= get_field('name') ?></h3>
                             <small class="testimonialcard__occupation"><?= get_field('occupation') ?></small>
                         </div>
                     </li>

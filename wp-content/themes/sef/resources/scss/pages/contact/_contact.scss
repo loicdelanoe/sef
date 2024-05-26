@@ -16,3 +16,21 @@
     text-decoration: underline;
   }
 }
+
+@media screen and (min-width: $tablet) {
+  .contact {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__upper, &__lower {
+      width: 49%;
+    }
+
+    &__title {
+      flex: 0 0 100%;
+    }
+  }
+
+
+}

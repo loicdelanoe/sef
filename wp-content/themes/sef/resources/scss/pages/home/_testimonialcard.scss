@@ -29,3 +29,9 @@
     font-size: 1.2em;
   }
 }
+
+@media screen and (min-width: $tablet){
+  .testimonialcard {
+    min-width: 30rem;
+  }
+}

@@ -6,7 +6,6 @@
   padding: 103px 0 101px 0;
   @include side-padding-section;
   text-align: center;
-  //background-color: $background-color;
 
   &__image {
     position: absolute;
@@ -15,7 +14,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    //max-height: 434px;
     border-radius: 0;
   }
 
@@ -33,4 +31,12 @@
     display: flex;
     gap: 10px;
   }
+}
+
+@media screen and (min-width: $tablet) {
+  .hero {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+
 }

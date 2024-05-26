@@ -8,19 +8,21 @@
         <?= wp_get_attachment_image(get_field('image'), 'full', false, [
             'class' => 'mission__image'
         ]) ?>
-        <p class="mission__content"><?= get_field('content') ?></p>
+        <p class="mission__content" itemprop="description"><?= get_field('content') ?></p>
     </section>
     <section class="history">
         <h2 class="mission__title"><?= get_field('history_title') ?></h2>
         <?= wp_get_attachment_image(get_field('history_image'), 'full', false, [
-            'class' => 'mission__image'
+            'class' => 'history__image'
         ]) ?>
-        <p class="mission__content"><?= get_field('history_content') ?></p>
+        <p class="mission__content" itemprop="description"><?= get_field('history_content') ?></p>
     </section>
     <div class="bg">
         <section class="more">
-            <h2 class="more__title">Besoin de plus d'informations ?</h2>
-            <p class="more__text">Apprenez en plus sur le SEF et ce que nous faisons</p>
+            <div class="more__upper">
+                <h2 class="more__title">Besoin de plus d'informations ?</h2>
+                <p class="more__text">Apprenez en plus sur le <span itemprop="name">SEF</span> et ce que nous faisons</p>
+            </div>
             <ul class="more__container">
                 <li class="more__item"><a href="<?= home_url('/nous-soutenir/#material') ?>" class="more__link">Dons matériels</a></li>
                 <li class="more__item"><a href="<?= home_url('/nous-soutenir/#financial') ?>" class="more__link">Dons financiers</a></li>

@@ -26,26 +26,28 @@
                 <a class="newscard__link" href="<?= get_permalink() ?>"><span class="sro">Visiter l'article</span></a>
             </article>
         <?php endwhile; endif; ?>
-        <?php
-        $posts = new WP_Query([
-            'post_type' => 'post',
-            'post_status' => 'publish',
-            'offset' => 1,
-            'orderby' => 'date',
-            'order' => 'DESC',
-        ]);
+        <div class="news__container--grid">
+            <?php
+            $posts = new WP_Query([
+                'post_type' => 'post',
+                'post_status' => 'publish',
+                'offset' => 1,
+                'orderby' => 'date',
+                'order' => 'DESC',
+            ]);
 
-        if ($posts->have_posts()): while ($posts->have_posts()): $posts->the_post(); ?>
-            <article class="newscard">
-                <div class="newscard__container">
-                    <?= wp_get_attachment_image(get_field('image'), 'full', false, [
-                        'class' => 'newscard__img'
-                    ]) ?>
-                    <h3 class="newscard__title"><?= get_the_title() ?></h3>
-                </div>
-                <a class="newscard__link" href="<?= get_permalink() ?>"><span class="sro">Visiter l'article</span></a>
-            </article>
-        <?php endwhile; endif; ?>
+            if ($posts->have_posts()): while ($posts->have_posts()): $posts->the_post(); ?>
+                <article class="newscard">
+                    <div class="newscard__container">
+                        <?= wp_get_attachment_image(get_field('image'), 'full', false, [
+                            'class' => 'newscard__img'
+                        ]) ?>
+                        <h3 class="newscard__title"><?= get_the_title() ?></h3>
+                    </div>
+                    <a class="newscard__link" href="<?= get_permalink() ?>"><span class="sro">Visiter l'article</span></a>
+                </article>
+            <?php endwhile; endif; ?>
+        </div>
     </section>
 </main>
 

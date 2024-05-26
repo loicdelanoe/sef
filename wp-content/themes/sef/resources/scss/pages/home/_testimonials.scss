@@ -14,3 +14,11 @@
     gap: 10px;
   }
 }
+
+@media screen and (min-width: $tablet){
+  .testimonials {
+    &__container {
+      gap: 1em;
+    }
+  }
+}
