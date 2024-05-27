@@ -1047,6 +1047,7 @@ input[id=burger]:checked ~ .burger .burger__line:nth-child(3) {
 .field__container {
   display: flex;
   flex-direction: column;
+  margin-bottom: 1.6em;
 }
 .field__label {
   font-weight: bold;
@@ -1061,8 +1062,11 @@ input[id=burger]:checked ~ .burger .burger__line:nth-child(3) {
   background-color: #E9F1F7;
   padding: 0.8em 1em;
   border-radius: 5px;
-  margin-bottom: 1.6em;
   font-size: 1em;
+}
+.field__error {
+  color: #D04343;
+  margin-top: 0.5em;
 }
 
 .location {

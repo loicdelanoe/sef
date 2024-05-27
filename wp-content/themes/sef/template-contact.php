@@ -24,22 +24,54 @@
         <article class="contact__lower contactform">
             <h2 class="sro">Formulaire de contact</h2>
             <p class="contactform__text">Les champs avec <span>*</span> sont obligatoires.</p>
-            <form class="form" action="">
+            <?php
+            $feedback = ContactForm::feedback();
+            ?>
+            <form class="form" action="<?= esc_url(admin_url('admin-post.php')); ?>" method="post">
+                <?php if ($feedback) : ?>
+                    <p class="field__valid"><?= $feedback ?></p>
+                <?php endif; ?>
                 <div class="field__container">
                     <label class="field__label" for="fullname" data-required="true">Nom complet</label>
-                    <input class="field__input" type="text" name="fullname" id="fullname" placeholder="Jon Doe">
+                    <input class="field__input" type="text" name="fullname" id="fullname" placeholder="Jon Doe" value="<?= $_SESSION['old']['fullname'] ?? '' ?>">
+                    <?php if ($_SESSION['errors']['fullname'] ?? null): ?>
+                        <p class="field__error"><?= $_SESSION['errors']['fullname'] ?></p>
+                    <?php endif; ?>
                 </div>
                 <div class="field__container">
                     <label class="field__label" for="email" data-required="true">Adresse mail</label>
-                    <input class="field__input" type="email" name="email" id="email" placeholder="jon.doe@exemple.be">
+                    <input class="field__input" type="email" name="email" id="email" placeholder="jon.doe@exemple.be" value="<?= $_SESSION['old']['email'] ?? '' ?>">
+                    <?php if ($_SESSION['errors']['email'] ?? null): ?>
+                        <p class="field__error"><?= $_SESSION['errors']['email'] ?></p>
+                    <?php endif; ?>
+                </div>
+                <div class="field__container">
+                    <label class="field__label" for="subject" data-required="true">Sujet</label>
+                    <select class="field__input" name="subject" id="subject">
+                        <option value="">Choisissez un sujet</option>
+                        <option value="devenir-benevole">Devenir bénévole</option>
+                        <option value="don-financiers">Don financiers</option>
+                        <option value="don-materiel">Don matériel</option>
+                        <option value="prise-de-contact">Prise de contact</option>
+                    </select>
+                    <?php if ($_SESSION['errors']['subject'] ?? null): ?>
+                        <p class="field__error"><?= $_SESSION['errors']['subject'] ?></p>
+                    <?php endif; ?>
                 </div>
                 <div class="field__container">
                     <label class="field__label" for="message" data-required="true">Message</label>
                     <textarea class="field__textarea" name="message" id="message" cols="30"
-                              rows="10" placeholder="Ici votre message..."></textarea>
+                              rows="10" placeholder="Ici votre message..."><?= $_SESSION['old']['email'] ?? '' ?></textarea>
+                    <?php if ($_SESSION['errors']['message'] ?? null): ?>
+                        <p class="field__error"><?= $_SESSION['errors']['message'] ?></p>
+                    <?php endif; ?>
                 </div>
                 <input type="hidden" name="action" value="custom_contact_form">
                 <button class="field__submit cta" type="submit">Envoyer</button>
+                <?php
+                $_SESSION['errors'] = [];
+                $_SESSION['old'] = [];
+                ?>
             </form>
         </article>
 
