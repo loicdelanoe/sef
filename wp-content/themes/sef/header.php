@@ -9,9 +9,9 @@
     <meta name="keywords"
           content="aide sociale, soutien aux sans-abri, réinsertion professionnelle, SEF Huy, dons matériels, bénévolat, précarité, exclusion sociale, collecte de dons, aide psychologique, hébergement d'urgence, formation, ateliers, aide administrative, service d'entraide, communauté solidaire, Huy, soutien aux vulnérables, dépôt de dons, seconde main, bénévoles, réinsertion sociale, aide humanitaire, aide aux démunis, services sociaux, soutien local, associations caritatives, solidarité, engagement bénévole">
     <link rel="shortcut icon" href="<?= get_site_icon_url(); ?>"/>
-    <link rel="canonical" href="<?= dw_get_canonical_url() ?>">
+    <link rel="canonical" href="<?= wp_get_canonical_url() ?>">
     <link rel="stylesheet" href="<?= dw_asset('css/main.css') ?>">
-    <title>SEF Huy</title>
+    <title><?= get_bloginfo('name') ?></title>
 </head>
 <body itemscope itemtype="https://schema.org/Organization">
 <h1 class="sro"><?= get_the_title() ?></h1>

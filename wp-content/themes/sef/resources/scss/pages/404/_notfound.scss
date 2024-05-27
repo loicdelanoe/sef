@@ -1,0 +1,20 @@
+.notfound {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 100vh;
+
+  &__title {
+    font-size: 5em;
+    margin-bottom: 0.5em;
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  &__text {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+  }
+}

@@ -23,6 +23,8 @@
 
 @media screen and (min-width: $laptop) {
   .container {
-
+    &__center {
+      max-width: initial;
+    }
   }
 }
