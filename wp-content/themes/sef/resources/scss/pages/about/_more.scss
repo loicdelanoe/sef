@@ -1,8 +1,6 @@
 .more {
   display: flex;
   flex-direction: column;
-  padding: 45px 0;
-  @include side-padding-section;
 
   &__title {
     text-align: left;
@@ -32,9 +30,21 @@
   }
 }
 
-@media screen and (min-width: $tablet){
+@media screen and (min-width: $tablet) {
   .more {
     flex-direction: row;
     justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .more {
+    &__upper {
+      max-width: 400px;
+    }
+
+    &__container {
+      width: 500px;
+    }
   }
 }

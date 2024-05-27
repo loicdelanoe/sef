@@ -6,7 +6,7 @@
   }
 }
 
-@media screen and (min-width: $tablet){
+@media screen and (min-width: $tablet) {
   .container {
     &__grid {
       display: grid;
@@ -18,5 +18,11 @@
       max-width: 564px;
       margin: 0 auto;
     }
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .container {
+
   }
 }

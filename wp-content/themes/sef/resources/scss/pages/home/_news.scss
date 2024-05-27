@@ -23,17 +23,25 @@
 
 @media screen and (min-width: 1024px){
   .news {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
 
     &__title {
-      flex: 0 0 100%;
+      grid-column: span 2;
     }
 
     &__container {
       &--grid {
-        width: 49%;
+        &-4 {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1em;
+
+          & > article {
+            //min-height: 500px;
+          }
+        }
       }
     }
   }

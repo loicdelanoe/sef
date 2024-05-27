@@ -1,12 +1,18 @@
 .volunteer {
   display: flex;
   flex-direction: column;
-  padding: 90px 0;
-  @include side-padding-section;
+  padding: 90px 24px;
   align-items: center;
   text-align: center;
 
   &__text {
     margin-bottom: 1.4em;
+    max-width: 646px;
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .volunteer {
+    padding: 172px 24px;
   }
 }

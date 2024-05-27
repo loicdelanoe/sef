@@ -26,7 +26,7 @@
                 <a class="newscard__link" href="<?= get_permalink() ?>"><span class="sro">Visiter l'article</span></a>
             </article>
         <?php endwhile; endif; ?>
-        <div class="news__container--grid">
+        <div class="news__container--grid news__container--grid-4">
             <?php
             $posts = new WP_Query([
                 'post_type' => 'post',

@@ -1,8 +1,6 @@
 .financial {
   display: flex;
   flex-direction: column;
-  padding: 45px 0;
-  @include side-padding-section;
 
   &__title {
     text-align: left;
@@ -15,24 +13,36 @@
 
 @media screen and (min-width: $tablet){
   .financial {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4em;
 
     &__title {
-      flex: 0 0 100%;
-      order: 0;
+      grid-column: span 2;
     }
 
     &__content, &__image {
-      flex-basis: 48%;
       margin: 0;
-
     }
 
     &__content {
       order: 1;
+    }
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .financial {
+    column-gap: 10em;
+    align-items: center;
+
+    &__title {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    &__image {
+      min-height: 295px;
     }
   }
 }

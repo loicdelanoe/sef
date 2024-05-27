@@ -1,7 +1,11 @@
 .support {
   display: flex;
   flex-direction: column;
-  padding-top: 45px;
-  @include side-padding-section;
   text-align: center;
+  align-items: center;
+  padding-bottom: 0;
+
+  &__text {
+    max-width: 436px;
+  }
 }

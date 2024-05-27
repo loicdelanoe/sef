@@ -11,7 +11,7 @@
         <p class="mission__content" itemprop="description"><?= get_field('content') ?></p>
     </section>
     <section class="history">
-        <h2 class="mission__title"><?= get_field('history_title') ?></h2>
+        <h2 class="history__title"><?= get_field('history_title') ?></h2>
         <?= wp_get_attachment_image(get_field('history_image'), 'full', false, [
             'class' => 'history__image'
         ]) ?>

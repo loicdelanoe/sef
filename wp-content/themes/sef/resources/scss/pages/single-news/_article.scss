@@ -1,8 +1,6 @@
 .article {
   display: flex;
   flex-direction: column;
-  padding: 45px 0;
-  @include side-padding-section;
 
   &__title {
     text-align: left;
@@ -21,6 +19,30 @@
   }
 
   &__date {
+    display: inline-block;
     margin-bottom: 1.4em;
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .article {
+    &__title {
+      margin-left: 0;
+      margin-right: 0;
+
+    }
+
+    &__container {
+      max-width: 720px;
+      margin: auto;
+    }
+
+    &__image {
+      margin-bottom: 2em;
+    }
+
+    &__date {
+      margin-bottom: 2em;
+    }
   }
 }
