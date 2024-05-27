@@ -4,7 +4,7 @@
 
 <main>
     <section class="articles">
-        <h2 class="articles__title">Actualités</h2>
+        <h2 class="articles__title" data-animation="show-up">Actualités</h2>
         <?php
         $last_post = new WP_Query([
             'post_type' => 'post',
@@ -16,7 +16,7 @@
         ]);
 
         if ($last_post->have_posts()): while ($last_post->have_posts()): $last_post->the_post(); ?>
-            <article class="newscard">
+            <article class="newscard" data-animation="show-up">
                 <div class="newscard__container--last">
                     <?= wp_get_attachment_image(get_field('image'), 'full', false, [
                         'class' => 'newscard__img--last'
@@ -37,7 +37,7 @@
             ]);
 
             if ($posts->have_posts()): while ($posts->have_posts()): $posts->the_post(); ?>
-                <article class="newscard">
+                <article class="newscard" data-animation="show-up">
                     <div class="newscard__container">
                         <?= wp_get_attachment_image(get_field('image'), 'full', false, [
                             'class' => 'newscard__img'

@@ -6,16 +6,16 @@
                 'class' => 'hero__image',
             ]) ?>
             <section class="hero">
-                <h2 class="hero__title"><?= get_field('title') ?></h2>
-                <p class="hero__quote" itemprop="description"><?= get_field('quote') ?></p>
-                <div class="hero__container">
+                <h2 class="hero__title" data-animation="show-up"><?= get_field('title') ?></h2>
+                <p class="hero__quote" itemprop="description" data-animation="show-up"><?= get_field('quote') ?></p>
+                <div class="hero__container" data-animation="show-up">
                     <a href="<?= home_url('/nous-soutenir') ?>" class="cta">Faire un don</a>
                     <a href="<?= home_url('/contact') ?>" class="cta" data-variant="secondary">Nous contacter</a>
                 </div>
             </section>
         </div>
         <section class="news">
-            <h2 class="news__title">Nos dernières actualités</h2>
+            <h2 class="news__title" data-animation="show-up">Nos dernières actualités</h2>
             <?php
             $last_post = new WP_Query([
                 'post_type' => 'post',
@@ -27,7 +27,7 @@
             ]);
 
             if ($last_post->have_posts()): while ($last_post->have_posts()): $last_post->the_post(); ?>
-                <article class="newscard--last" itemprop="publishingPrinciples" itemscope itemtype="https://schema.org/Article">
+                <article class="newscard--last" itemprop="publishingPrinciples" itemscope itemtype="https://schema.org/Article" data-animation="show-up">
                     <div class="newscard__container--last">
                         <?= wp_get_attachment_image(get_field('image'), 'full', false, [
                             'class' => 'newscard__img--last'
@@ -48,7 +48,7 @@
                 ]);
 
                 if ($posts->have_posts()): while ($posts->have_posts()): $posts->the_post(); ?>
-                    <article class="newscard" itemprop="publishingPrinciples" itemscope itemtype="https://schema.org/Article">
+                    <article class="newscard" itemprop="publishingPrinciples" itemscope itemtype="https://schema.org/Article" data-animation="show-up">
                         <div class="newscard__container">
                             <?= wp_get_attachment_image(get_field('image'), 'full', false, [
                                 'class' => 'newscard__img'
@@ -62,7 +62,7 @@
         </section>
         <div class="bg">
             <section class="statistics">
-                <h2 class="statistics__title">Quelques statistiques</h2>
+                <h2 class="statistics__title" data-animation="show-up">Quelques statistiques</h2>
                 <ul class="statistics__container">
                     <?php
                     $statistics = new WP_Query([
@@ -76,7 +76,7 @@
                     if ($statistics->have_posts()): while ($statistics->have_posts()): $statistics->the_post();
                         ?>
 
-                        <li class="statistics__item statcard">
+                        <li class="statistics__item statcard" data-animation="show-up">
                             <h3 class="statcard__number"><?= get_field('statistic') ?></h3>
                             <p class="statcard__text"><?= get_field('text') ?></p>
                         </li>
@@ -86,7 +86,7 @@
             </section>
         </div>
         <section class="testimonials" itemprop="review" itemscope itemtype="https://schema.org/Review">
-            <h2 class="testimonials__title">Témoignages</h2>
+            <h2 class="testimonials__title" data-animation="show-up">Témoignages</h2>
             <ul class="testimonials__container">
                 <?php
                 $testimonials = new WP_Query([
@@ -111,8 +111,8 @@
             </ul>
         </section>
         <section class="help">
-            <h2 class="help__title">Votre générosité nous permet d’avancer</h2>
-            <div class="help__container">
+            <h2 class="help__title" data-animation="show-up">Votre générosité nous permet d’avancer</h2>
+            <div class="help__container" data-animation="show-up">
                 <a href="<?= home_url("/nous-soutenir") ?>" class="cta">Nous soutenir</a>
                 <a href="<?= home_url("/contact") ?>" class="cta" data-variant="tertiary">Nous contacter</a>
             </div>

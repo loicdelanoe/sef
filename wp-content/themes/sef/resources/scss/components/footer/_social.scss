@@ -10,9 +10,27 @@
     border: 1px solid $alt-text-color;
     border-radius: 5px;
     text-align: center;
+    transition: .3s;
+
+    &:hover {
+      background-color: $alt-text-color;
+      color: $text-color;
+    }
 
     &:after {
-      content: "F";
+      content: "\ea90";
+      font-family: 'icomoon' !important;
+      speak: never;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transition: .3s;
     }
   }
 }

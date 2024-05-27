@@ -1,6 +1,13 @@
+import {Slider} from "./Slider";
+import {Observer} from "./Observer";
+
 class Main {
     constructor() {
-        // alert('test');
+        if (window.location.pathname === '/') {
+            this.slider = new Slider();
+        }
+
+        this.observer = new Observer();
     }
 }
 

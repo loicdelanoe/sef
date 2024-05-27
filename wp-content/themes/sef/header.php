@@ -15,7 +15,7 @@
 </head>
 <body itemscope itemtype="https://schema.org/Organization">
 <h1 class="sro"><?= get_the_title() ?></h1>
-<header>
+<header role="banner">
     <nav class="nav" aria-label="Menu principal">
         <h2 class="sro">Navigation principale</h2>
         <div class="nav__brand">

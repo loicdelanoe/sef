@@ -3,7 +3,6 @@
 
   &__title {
     text-align: center;
-
   }
 
   &__container {
@@ -11,6 +10,7 @@
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     gap: 10px;
+    padding: 1em;
   }
 }
 

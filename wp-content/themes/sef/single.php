@@ -3,11 +3,12 @@
     <main>
         <?php while (have_posts()) : the_post(); ?>
             <section class="article">
-                <h2 class="article__title"><?= get_the_title() ?></h2>
+                <h2 class="article__title" data-animation="show-up"><?= get_the_title() ?></h2>
                 <?= wp_get_attachment_image(get_field('image'), 'full', false, [
-                    'class' => 'article__image'
+                    'class' => 'article__image',
+                    'data-animation' => 'show-up'
                 ]) ?>
-                <article class="article__container">
+                <article class="article__container" data-animation="show-up">
                     <p class="article__author">Par <?= get_the_author() ?>,</p>
                     <time class="article__date" datetime="<?= the_time('Y-m-d') ?>">Le <?= get_the_date() ?></time>
                     <h3 class="sro">Contenu de l'article</h3>
@@ -18,7 +19,7 @@
             </section>
         <?php endwhile; ?>
         <section class="other">
-            <h2 class="other__title">Autres articles</h2>
+            <h2 class="other__title" data-animation="show-up">Autres articles</h2>
             <div class="container__grid  news__container--grid-4">
                 <?php
                 $posts = new WP_Query([
@@ -31,7 +32,7 @@
                 ]);
 
                 if ($posts->have_posts()): while ($posts->have_posts()): $posts->the_post(); ?>
-                    <article class="newscard">
+                    <article class="newscard" data-animation="show-up">
                         <div class="newscard__container">
                             <?= wp_get_attachment_image(get_field('image'), 'full', false, [
                                 'class' => 'newscard__img'

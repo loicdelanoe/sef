@@ -4,6 +4,10 @@
   &:before {
     @include background-gradient;
   }
+
+  &__slider {
+    margin: auto;
+  }
 }
 
 @media screen and (min-width: $tablet) {

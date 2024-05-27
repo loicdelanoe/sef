@@ -3,6 +3,7 @@
 @import 'normalize';
 @import 'typography';
 @import 'functions';
+@import 'components/observer';
 
 @import 'components/container';
 @import 'components/wysiwyg';
@@ -24,6 +25,7 @@
 @import 'pages/home/statcard';
 @import 'pages/home/testimonials';
 @import 'pages/home/testimonialcard';
+@import 'components/slider';
 @import 'pages/home/help';
 
 @import 'pages/about/mission';

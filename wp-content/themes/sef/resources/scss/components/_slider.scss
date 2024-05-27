@@ -1,0 +1,49 @@
+.slider {
+  &__container--button {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+  }
+
+  &__button {
+    font-size: 1.6em;
+    padding: 1em;
+    cursor: pointer;
+
+    &[data-id="prev"]:after {
+      content: "\ea40";
+      font-family: 'icomoon' !important;
+      speak: never;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transition: .3s;
+    }
+
+    &[data-id="next"]:after {
+      content: "\ea3c";
+      font-family: 'icomoon' !important;
+      speak: never;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transition: .3s;
+    }
+  }
+}
+
+.no-snap {
+  scroll-snap-type: none;
+}

@@ -4,8 +4,8 @@
 
 <main>
     <section class="contact">
-        <h2 class="contact__title">Contactez-nous</h2>
-        <article class="contact__upper">
+        <h2 class="contact__title" data-animation="show-up">Contactez-nous</h2>
+        <article class="contact__upper" data-animation="show-up">
             <h2 class="sro">Informations de contact</h2>
             <p class="contact__text"><?= get_field('text') ?></p>
             <dl class="contact__container">
@@ -21,7 +21,7 @@
             <p class="contact__text">Vous souhaitez d’autres informations&nbsp;?</p>
             <a href="<?= home_url("/nous-soutenir") ?>" class="cta">Nous soutenir</a>
         </article>
-        <article class="contact__lower contactform">
+        <article class="contact__lower contactform" data-animation="show-up">
             <h2 class="sro">Formulaire de contact</h2>
             <p class="contactform__text">Les champs avec <span>*</span> sont obligatoires.</p>
             <?php
