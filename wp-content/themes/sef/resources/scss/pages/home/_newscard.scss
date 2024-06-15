@@ -42,18 +42,25 @@
     font-size: 1.2em;
 
     &--last {
-      position: absolute;
-      bottom: 24px;
-      right: 15px;
-      left: 15px;
-      font-size: 22px;
-      color: $alt-text-color;
+      font-size: 1.4em;
     }
   }
 
   &__link {
     position: absolute;
     inset: 0;
+  }
+
+  &__view {
+    color: $alt-text-color;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    line-height: 1.6;
+
+    &:after {
+      content: " >";
+    }
   }
 }
 
@@ -66,9 +73,8 @@
 
     &__title {
       &--last {
-        font-size: 2em;
-        max-width: 720px;
-        padding: 25px;
+        font-size: 2.4em;
+        margin-bottom: 0.3em;
       }
     }
 

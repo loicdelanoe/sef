@@ -16,7 +16,7 @@
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.ttf?46fvgv') format('truetype');
+  src: url('../fonts/icomoon.ttf?46fvgv') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -40,7 +40,18 @@ h2 {
   margin: 0 auto 1em auto;
   text-align: center;
   max-width: 716px;
+
+  &[data-variant="secondary"] {
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+
+    & > span {
+      font-weight: bold;
+    }
+  }
 }
+
 
 a {
   text-decoration: none;
@@ -87,13 +98,13 @@ input, textarea, button {
   font-family: inherit;
 }
 
-@media screen and (min-width: $tablet){
+@media screen and (min-width: $tablet) {
   h2 {
     font-size: 42px;
   }
 }
 
-@media screen and (min-width: $laptop){
+@media screen and (min-width: $laptop) {
   h2 {
     font-size: 46px;
   }

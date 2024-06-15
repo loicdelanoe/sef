@@ -81,7 +81,7 @@ section {
   section {
     max-width: 1200px;
     margin: auto;
-    padding: 80px 24px;
+    padding: 100px 24px;
   }
   header {
     max-width: 1200px;
@@ -127,6 +127,14 @@ h2 {
   margin: 0 auto 1em auto;
   text-align: center;
   max-width: 716px;
+}
+h2[data-variant=secondary] {
+  font-weight: normal;
+  display: flex;
+  flex-direction: column;
+}
+h2[data-variant=secondary] > span {
+  font-weight: bold;
 }
 
 a {
@@ -666,8 +674,22 @@ input[id=burger]:checked ~ .burger .burger__line:nth-child(3) {
   flex-direction: column;
 }
 .news__title {
-  text-align: center;
   margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
+.news__container--info {
+  position: absolute;
+  bottom: 0;
+  padding: 2rem;
+  color: #F3F9FE;
+}
+.news__container--title {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -742,16 +764,21 @@ input[id=burger]:checked ~ .burger .burger__line:nth-child(3) {
   font-size: 1.2em;
 }
 .newscard__title--last {
-  position: absolute;
-  bottom: 24px;
-  right: 15px;
-  left: 15px;
-  font-size: 22px;
-  color: #F3F9FE;
+  font-size: 1.4em;
 }
 .newscard__link {
   position: absolute;
   inset: 0;
+}
+.newscard__view {
+  color: #F3F9FE;
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  line-height: 1.6;
+}
+.newscard__view:after {
+  content: " >";
 }
 
 @media screen and (min-width: 1024px) {
@@ -760,9 +787,8 @@ input[id=burger]:checked ~ .burger .burger__line:nth-child(3) {
     margin-bottom: 0;
   }
   .newscard__title--last {
-    font-size: 2em;
-    max-width: 720px;
-    padding: 25px;
+    font-size: 2.4em;
+    margin-bottom: 0.3em;
   }
   .newscard__container--last {
     height: 100%;

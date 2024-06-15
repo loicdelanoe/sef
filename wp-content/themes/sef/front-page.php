@@ -15,7 +15,10 @@
             </section>
         </div>
         <section class="news">
-            <h2 class="news__title" data-animation="show-up">Nos dernières actualités</h2>
+            <div class="news__container--title">
+                <h2 class="news__title" data-animation="show-up" data-variant="secondary">Nos dernières <span>Actualités</span></h2>
+                <a class="cta" href="<?= home_url('actualite') ?>">Toutes l'actus</a>
+            </div>
             <?php
             $last_post = new WP_Query([
                 'post_type' => 'post',
@@ -27,14 +30,19 @@
             ]);
 
             if ($last_post->have_posts()): while ($last_post->have_posts()): $last_post->the_post(); ?>
-                <article class="newscard--last" itemprop="publishingPrinciples" itemscope itemtype="https://schema.org/Article" data-animation="show-up">
+                <article class="newscard--last" itemprop="publishingPrinciples" itemscope
+                         itemtype="https://schema.org/Article" data-animation="show-up">
                     <div class="newscard__container--last">
                         <?= wp_get_attachment_image(get_field('image'), 'full', false, [
                             'class' => 'newscard__img--last'
                         ]) ?>
-                        <h3 class="newscard__title--last" itemprop="headline"><?= get_the_title() ?></h3>
+                        <div class="news__container--info">
+                            <h3 class="newscard__title--last" itemprop="headline"><?= get_the_title() ?></h3>
+                            <p class="newscard__date--last"><?= get_the_date() ?></p>
+                        </div>
                     </div>
-                    <a class="newscard__link" href="<?= get_permalink() ?>"><span class="sro">Visiter l'article</span></a>
+                    <a class="newscard__link newscard__link--last" href="<?= get_permalink() ?>"><span
+                                class="newscard__view">Voir l'article</span></a>
                 </article>
             <?php endwhile; endif; ?>
             <div class="news__container--grid">
@@ -48,21 +56,25 @@
                 ]);
 
                 if ($posts->have_posts()): while ($posts->have_posts()): $posts->the_post(); ?>
-                    <article class="newscard" itemprop="publishingPrinciples" itemscope itemtype="https://schema.org/Article" data-animation="show-up">
+                    <article class="newscard" itemprop="publishingPrinciples" itemscope
+                             itemtype="https://schema.org/Article" data-animation="show-up">
                         <div class="newscard__container">
                             <?= wp_get_attachment_image(get_field('image'), 'full', false, [
                                 'class' => 'newscard__img'
                             ]) ?>
                             <h3 class="newscard__title" itemprop="headline"><?= get_the_title() ?></h3>
+                            <p class="newscard__date--last"><?= get_the_date() ?></p>
                         </div>
-                        <a class="newscard__link" href="<?= get_permalink() ?>"><span class="sro">Visiter l'article</span></a>
+                        <a class="newscard__link" href="<?= get_permalink() ?>"><span
+                                    class="sro">Visiter l'article</span></a>
                     </article>
                 <?php endwhile; endif; ?>
             </div>
         </section>
         <div class="bg">
             <section class="statistics">
-                <h2 class="statistics__title" data-animation="show-up">Quelques statistiques</h2>
+                <h2 class="statistics__title" data-animation="show-up" data-variant="secondary">Quelques <span>Statistiques</span>
+                </h2>
                 <ul class="statistics__container">
                     <?php
                     $statistics = new WP_Query([

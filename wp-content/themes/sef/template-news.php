@@ -21,9 +21,12 @@
                     <?= wp_get_attachment_image(get_field('image'), 'full', false, [
                         'class' => 'newscard__img--last'
                     ]) ?>
-                    <h3 class="newscard__title--last"><?= get_the_title() ?></h3>
+                    <div class="news__container--info">
+                        <h3 class="newscard__title--last" itemprop="headline"><?= get_the_title() ?></h3>
+                        <p class="newscard__date--last"><?= get_the_date() ?></p>
+                    </div>
                 </div>
-                <a class="newscard__link" href="<?= get_permalink() ?>"><span class="sro">Visiter l'article</span></a>
+                <a class="newscard__link" href="<?= get_permalink() ?>"><span class="newscard__view">Voir l'article</span></a>
             </article>
         <?php endwhile; endif; ?>
         <div class="news__container--grid news__container--grid-4">
@@ -43,6 +46,8 @@
                             'class' => 'newscard__img'
                         ]) ?>
                         <h3 class="newscard__title"><?= get_the_title() ?></h3>
+                        <p class="newscard__date--last"><?= get_the_date() ?></p>
+
                     </div>
                     <a class="newscard__link" href="<?= get_permalink() ?>"><span class="sro">Visiter l'article</span></a>
                 </article>

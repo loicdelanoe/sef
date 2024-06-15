@@ -11,4 +11,4 @@ class Main {
     }
 }
 
-window.addEventListener('load', () => window.site = new Main());
+new Main();
