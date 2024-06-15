@@ -15,14 +15,15 @@
 </head>
 <body itemscope itemtype="https://schema.org/Organization">
 <h1 class="sro"><?= get_the_title() ?></h1>
-<header role="banner">
+<header role="banner" <?= is_front_page() ? 'class="absolute"' : '' ?>>
     <nav class="nav" aria-label="Menu principal">
         <h2 class="sro">Navigation principale</h2>
         <div class="nav__brand">
             <a class="nav__branding" href="<?= home_url() ?>" title="Vers la page d'accueil"><span
                         itemprop="name">SEF</span></a>
-            <img src="<?= dw_asset('img/sef-logo.svg') ?>" alt="Logo de l'asbl SEF" width="70" height="41">
+            <img src="<?= is_front_page() ? dw_asset('img/sef-logo-alt.svg') : dw_asset('img/sef-logo.svg') ?>" alt="Logo de l'asbl SEF" width="70" height="41">
         </div>
+        <?= is_home() ?>
         <input type="checkbox" name="burger" id="burger" tabindex="0">
         <label class="burger" for="burger">
             <span class="sro">Menu</span>
@@ -37,10 +38,10 @@
             <?php foreach (dw_get_navigation_links('main') as $link):
 
                 if ($link->label === 'Contact'): ?>
-                    <li class="nav__items"><a href="<?= $link->url ?>" class="nav__link--alt cta"
+                    <li class="nav__items"><a href="<?= $link->url ?>" class="nav__link--contact cta"
                                               title="Vers la page <?= $link->label ?>"><?= $link->label ?></a></li>
                 <?php else: ?>
-                    <li class="nav__items"><a href="<?= $link->url ?>" class="nav__link <?= dw_is_active($link->url) ?>"
+                    <li class="nav__items"><a href="<?= $link->url ?>" class="nav__link <?= is_front_page() ? 'nav__link--alt' : '' ?> <?= dw_is_active($link->url) ?>"
                                               title="Vers la page <?= $link->label ?>"><?= $link->label ?></a></li>
                 <?php endif; ?>
 

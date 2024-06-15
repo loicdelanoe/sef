@@ -41,7 +41,16 @@
 
 @media screen and (min-width: 1024px) {
   .hero {
-    padding: 190px 24px;
+    //padding: 190px 24px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+      font-size: 52px;
+    }
 
     &__quote {
       max-width: 436px;

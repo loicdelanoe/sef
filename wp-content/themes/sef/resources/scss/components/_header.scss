@@ -2,4 +2,11 @@ header {
   display: block;
   //margin: auto;
   //max-width: 1200px;
+  padding-top: 1rem;
+}
+
+.absolute {
+  position: absolute;
+  right: 0;
+  left: 0;
 }

@@ -76,6 +76,7 @@
       flex-direction: row;
       min-height: auto;
       width: auto;
+      background-color: transparent;
     }
 
     &__link {
@@ -83,6 +84,12 @@
       padding: 1em;
 
       &--alt {
+        font-size: 1.1em;
+        padding: 1em;
+        color: $alt-text-color;
+      }
+
+      &--contact {
         margin-left: 1.5em;
       }
     }

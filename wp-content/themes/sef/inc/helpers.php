@@ -7,6 +7,10 @@ function dw_get_canonical_url(): string
 
 function dw_is_active(string $path): string
 {
+    if (dw_get_canonical_url() === $path && is_front_page()) {
+        return 'active-alt';
+    }
+
     return dw_get_canonical_url() === $path ? 'active' : '';
 }
 
