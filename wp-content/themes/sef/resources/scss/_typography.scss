@@ -67,16 +67,6 @@ a.active {
     width: 20px;
     background-color: $active-text-color;
   }
-
-  &-alt {
-    color: $alt-text-color;
-    font-weight: bold;
-
-    &:after {
-      width: 20px;
-      background-color: $alt-text-color;
-    }
-  }
 }
 
 strong {
@@ -107,6 +97,18 @@ input, textarea, button {
 @media screen and (min-width: $laptop) {
   h2 {
     font-size: 46px;
+  }
+
+  a.active {
+    &-alt {
+      color: $alt-text-color;
+      font-weight: bold;
+
+      &:after {
+        width: 20px;
+        background-color: $alt-text-color;
+      }
+    }
   }
 }
 

@@ -4,7 +4,7 @@
 
 <main>
     <section class="contact">
-        <h2 class="contact__title" data-animation="show-up">Contactez-nous</h2>
+        <h2 class="contact__title" data-animation="show-up" data-variant="secondary">Engagez-vous <span>Avec nous</span></h2>
         <article class="contact__upper" data-animation="show-up">
             <h2 class="sro">Informations de contact</h2>
             <p class="contact__text"><?= get_field('text') ?></p>

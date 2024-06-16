@@ -21,7 +21,8 @@
         <div class="nav__brand">
             <a class="nav__branding" href="<?= home_url() ?>" title="Vers la page d'accueil"><span
                         itemprop="name">SEF</span></a>
-            <img src="<?= is_front_page() ? dw_asset('img/sef-logo-alt.svg') : dw_asset('img/sef-logo.svg') ?>" alt="Logo de l'asbl SEF" width="70" height="41">
+            <img src="<?= is_front_page() ? dw_asset('img/sef-logo-alt.svg') : dw_asset('img/sef-logo.svg') ?>"
+                 alt="Logo de l'asbl SEF" width="70" height="41">
         </div>
         <?= is_home() ?>
         <input type="checkbox" name="burger" id="burger" tabindex="0">
@@ -29,9 +30,11 @@
             <span class="sro">Menu</span>
             <svg class="burger__container" focusable="false" aria-hidden="true" width="22" height="22"
                  viewBox="0 0 22 17" xmlns="http://www.w3.org/2000/svg">
-                <rect class="burger__line" width="22" height="2" fill="#265A79"/>
-                <rect class="burger__line" y="6.75" width="22" height="2" fill="#265A79"/>
-                <rect class="burger__line" y="13.5" width="22" height="2" fill="#265A79"/>
+                <rect class="burger__line" width="22" height="2" fill="<?= is_front_page() ? '#F3F9FE' : '#4F72A5' ?>"/>
+                <rect class="burger__line" y="6.75" width="22" height="2"
+                      fill="<?= is_front_page() ? '#F3F9FE' : '#4F72A5' ?>"/>
+                <rect class="burger__line" y="13.5" width="22" height="2"
+                      fill="<?= is_front_page() ? '#F3F9FE' : '#4F72A5' ?>"/>
             </svg>
         </label>
         <ul class="nav__container">
@@ -41,7 +44,8 @@
                     <li class="nav__items"><a href="<?= $link->url ?>" class="nav__link--contact cta"
                                               title="Vers la page <?= $link->label ?>"><?= $link->label ?></a></li>
                 <?php else: ?>
-                    <li class="nav__items"><a href="<?= $link->url ?>" class="nav__link <?= is_front_page() ? 'nav__link--alt' : '' ?> <?= dw_is_active($link->url) ?>"
+                    <li class="nav__items"><a href="<?= $link->url ?>"
+                                              class="nav__link <?= is_front_page() ? 'nav__link--alt' : '' ?> <?= dw_is_active($link->url) ?>"
                                               title="Vers la page <?= $link->label ?>"><?= $link->label ?></a></li>
                 <?php endif; ?>
 

@@ -4,9 +4,9 @@
 
 <main>
     <section class="support">
-        <h2 class="support__title" data-animation="show-up">Nous soutenir</h2>
-        <p class="support__text" itemprop="description" data-animation="show-up">Afin de nous soutenir vous trouverez
-            différentes possibilités pour nous soutenir.</p>
+        <h2 class="support__title" data-animation="show-up" data-variant="secondary">Vous voulez nous donner <span>Un petit coup de pouce ?</span></h2>
+        <p class="support__text" itemprop="description" data-animation="show-up">
+            Pour nous soutenir, vous trouverez diverses possibilités à votre disposition.</p>
     </section>
     <section class="material" id="material">
         <h2 class="material__title" data-animation="show-up"><?= get_field('material_title') ?></h2>

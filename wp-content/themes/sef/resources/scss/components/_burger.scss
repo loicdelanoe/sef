@@ -3,6 +3,7 @@
   align-items: center;
   padding-left: 10px;
   z-index: 10;
+  cursor: pointer;
 
 
   &__line {
@@ -22,14 +23,17 @@ input[id="burger"] {
   padding-left: 10px;
   z-index: 10;
 
-  //&:checked ~ .burger {
-  //  position: fixed;
-  //  right: 24px;
-  //}
-
   &:checked ~ .nav__container {
     position: fixed;
     transform: translateX(0);
+  }
+
+  body:has(&:checked) {
+    overflow: hidden;
+  }
+
+  &:checked ~ .burger .burger__line {
+    fill: $active-text-color;
   }
 
   &:checked ~ .burger .burger__line:nth-child(2) {

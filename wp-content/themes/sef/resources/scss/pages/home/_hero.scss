@@ -3,7 +3,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 103px 24px 101px 24px;
+  justify-content: center;
+  padding: 0 24px;
+  min-height: 70vh;
   text-align: center;
 
   &__image {
