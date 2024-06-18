@@ -45,7 +45,35 @@ function dw_get_navigation_links(string $location): array
     return $items;
 }
 
+function dw_og_page_title(): void
+{
+    if (is_front_page()) {
+        echo get_bloginfo('name');
+    } else if (is_archive()) {
+        echo get_the_archive_title() . ' | ' . get_bloginfo('name');
+    } else {
+        echo the_title() . ' | ' . get_bloginfo('name');
+    }
+}
+
 function dw_contact_form_controller(): void
 {
     new ContactForm($_POST);
 }
+
+function load_scripts(): void
+{
+    wp_enqueue_script('main', get_template_directory_uri() . '/public/js/main.js', [], false, [
+        'in_footer' => true,
+    ]);
+    wp_enqueue_style('my-theme', get_template_directory_uri() . '/public/css/main.css', [], false);
+}
+
+add_action('wp_enqueue_scripts', 'load_scripts');
+
+// Remove JQuery migrate if not needed (console log ouput fix)
+add_action('wp_default_scripts', function ($scripts) {
+    if (!empty($scripts->registered['jquery'])) {
+        $scripts->registered['jquery']->deps = array_diff($scripts->registered['jquery']->deps, ['jquery-migrate']);
+    }
+});

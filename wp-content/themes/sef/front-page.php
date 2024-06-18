@@ -2,7 +2,7 @@
 
     <main>
         <div class="container">
-            <?= wp_get_attachment_image(get_field('background-image'), 'overview_image', false, [
+            <?= wp_get_attachment_image(get_field('background-image'), 'full', false, [
                 'class' => 'hero__image',
             ]) ?>
             <section class="hero">

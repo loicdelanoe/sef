@@ -1,0 +1,66 @@
+.house {
+  padding-bottom: 2rem;
+
+  &__address {
+    font-weight: bold;
+    margin-bottom: 1.5em;
+  }
+
+  &__image {
+    object-fit: cover;
+    max-width: 482px;
+    max-height: 400px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .house {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .house {
+    padding-bottom: 0;
+
+    &:after {
+      position: absolute;
+      display: block;
+      content: '';
+      height: 100%;
+      width: 1px;
+      background-color: $border-color;
+      left: 50%;
+    }
+
+    &__container {
+      padding-right: 13rem;
+    }
+
+    &__image {
+      order: -1;
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      .house__container {
+        padding-left: 13rem;
+        padding-right: 0;
+        text-align: right;
+      }
+    }
+  }
+}

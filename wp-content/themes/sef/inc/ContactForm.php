@@ -77,11 +77,7 @@ class ContactForm
         $headers[] = "From {$data['name']} {$data['lastname']}: {$data['email']}";
         $headers[] = "Reply-To: {$data['email']}";
 
-        if (isset($data['subject'])) {
-            $subject = ucwords(str_replace("-", " ", $data['subject']));
-        } else {
-            $subject = "Prise de contact";
-        }
+        $subject = $data['subject'];
 
         wp_mail(get_bloginfo('admin_email'), $subject, $data['message'], $headers);
     }

@@ -2,7 +2,7 @@
   position: relative;
 
   &:before {
-    @include background-gradient;
+    @include darker-background;
   }
 
   &__slider {

@@ -7,7 +7,7 @@
   &__brand {
     display: inline-block;
     position: relative;
-    //z-index: 10;
+    z-index: 1;
 
     img {
       border-radius: 0;
@@ -46,6 +46,15 @@
     &:hover:after,
     &:focus:after {
       width: 20px;
+    }
+
+    &--contact {
+      margin: 3rem 24px 0 24px;
+      justify-self: flex-start;
+      padding-top: 1.3rem;
+      padding-bottom: 1.3rem;
+      display: flex;
+      justify-content: space-between;
     }
   }
 
@@ -86,10 +95,14 @@
         font-size: 1.1em;
         padding: 1em;
         color: $alt-text-color;
+
+        &:after {
+          background-color: $alt-text-color;
+        }
       }
 
       &--contact {
-        margin-left: 1.5em;
+        margin: 0 0 0 1.5em;
       }
     }
   }

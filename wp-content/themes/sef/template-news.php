@@ -18,7 +18,7 @@
         if ($last_post->have_posts()): while ($last_post->have_posts()): $last_post->the_post(); ?>
             <article class="newscard" data-animation="show-up">
                 <div class="newscard__container--last">
-                    <?= wp_get_attachment_image(get_field('image'), 'full', false, [
+                    <?= wp_get_attachment_image(get_field('image'), 'large', false, [
                         'class' => 'newscard__img--last'
                     ]) ?>
                     <div class="news__container--info">
@@ -42,7 +42,7 @@
             if ($posts->have_posts()): while ($posts->have_posts()): $posts->the_post(); ?>
                 <article class="newscard" data-animation="show-up">
                     <div class="newscard__container">
-                        <?= wp_get_attachment_image(get_field('image'), 'full', false, [
+                        <?= wp_get_attachment_image(get_field('image'), 'medium', false, [
                             'class' => 'newscard__img'
                         ]) ?>
                         <h3 class="newscard__title"><?= get_the_title() ?></h3>

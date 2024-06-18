@@ -26,3 +26,16 @@ register_post_type('temoignages', [
         'slug' => 'temoignages',
     ]
 ]);
+
+register_post_type('maisons', [
+    'label' => 'Maisons',
+    'description' => 'Liste des maisons d\'accueil',
+    'public' => true,
+    'hierarchical' => false,
+    'menu_position' => 7,
+    'menu_icon' => 'dashicons-store',
+    'has_archive' => false,
+    'rewrite' => [
+        'slug' => 'maisons',
+    ]
+]);

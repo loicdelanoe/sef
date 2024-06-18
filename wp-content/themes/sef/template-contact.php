@@ -47,13 +47,7 @@
                 </div>
                 <div class="field__container">
                     <label class="field__label" for="subject" data-required="true">Sujet</label>
-                    <select class="field__input" name="subject" id="subject">
-                        <option value="">Choisissez un sujet</option>
-                        <option value="devenir-benevole">Devenir bénévole</option>
-                        <option value="don-financiers">Don financiers</option>
-                        <option value="don-materiel">Don matériel</option>
-                        <option value="prise-de-contact">Prise de contact</option>
-                    </select>
+                    <input class="field__input" type="text" name="subject" id="subject" placeholder="Bénévolats, question, dons..." value="<?= $_SESSION['old']['subject'] ?? '' ?>">
                     <?php if ($_SESSION['errors']['subject'] ?? null): ?>
                         <p class="field__error"><?= $_SESSION['errors']['subject'] ?></p>
                     <?php endif; ?>

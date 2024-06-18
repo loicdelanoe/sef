@@ -16,6 +16,8 @@
 
     &__title {
       grid-column: span 2;
+      margin: 0 0 1em 0;
+      text-align: left;
     }
 
     &__content, &__image {
@@ -24,8 +26,8 @@
 
     &__image {
       order: 1;
-      min-height: 295px;
-
+      object-fit: cover;
+      height: 100%;
     }
   }
 }
@@ -34,9 +36,5 @@
   .mission {
     column-gap: 10em;
     align-items: center;
-
-    &__image {
-      min-height: 295px;
-    }
   }
 }

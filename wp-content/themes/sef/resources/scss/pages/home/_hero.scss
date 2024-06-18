@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 24px;
+  padding: 10rem 24px;
   min-height: 70vh;
   text-align: center;
 
@@ -36,14 +36,11 @@
 
 @media screen and (min-width: $tablet) {
   .hero {
-    padding-top: 150px;
-    padding-bottom: 150px;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .hero {
-    //padding: 190px 24px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;

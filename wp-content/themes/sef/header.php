@@ -8,9 +8,15 @@
     <meta name="description" content="<?= get_bloginfo('description') ?>">
     <meta name="keywords"
           content="aide sociale, soutien aux sans-abri, réinsertion professionnelle, SEF Huy, dons matériels, bénévolat, précarité, exclusion sociale, collecte de dons, aide psychologique, hébergement d'urgence, formation, ateliers, aide administrative, service d'entraide, communauté solidaire, Huy, soutien aux vulnérables, dépôt de dons, seconde main, bénévoles, réinsertion sociale, aide humanitaire, aide aux démunis, services sociaux, soutien local, associations caritatives, solidarité, engagement bénévole">
-    <link rel="shortcut icon" href="<?= get_site_icon_url(); ?>"/>
-    <link rel="canonical" href="<?= wp_get_canonical_url() ?>">
-    <link rel="stylesheet" href="<?= dw_asset('css/main.css') ?>">
+    <!-- Open Graph -->
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="<?php dw_og_page_title() ?>">
+    <meta property="og:url" content="<?= home_url($_SERVER['REQUEST_URI']) ?>">
+    <meta property="og:site_name" content="<?= get_bloginfo('name') ?>">
+    <!-- Wordpress head -->
+    <?php wp_head() ?>
+    <!-- Title -->
     <title><?= get_bloginfo('name') ?></title>
 </head>
 <body itemscope itemtype="https://schema.org/Organization">

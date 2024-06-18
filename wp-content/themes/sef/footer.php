@@ -14,23 +14,9 @@
                 </ul>
             </div>
             <div class="footer__container--nav">
-                <div class="footer__container">
-                    <h3 class="footer__subtitle">Coordonnées</h3>
-                    <ul class="footer__list list">
-                        <li class="list__link" itemprop="telephone">085 / 21 57 52</li>
-                        <li class="list__link" itemprop="email">contact@sefasbl.com</li>
-                        <li class="list__link" itemprop="address">Rue du Marché 33 4500 HUY</li>
-                    </ul>
-                </div>
-                <div class="footer__container">
-                    <h3 class="footer__subtitle">Nous soutenir</h3>
-                    <ul class="footer__list list">
-                        <li class="list__item"><a href="<?= home_url("/nous-soutenir/#material") ?>" class="list__link">Dons matériels</a></li>
-                        <li class="list__item"><a href="<?= home_url("/nous-soutenir/#financial") ?>" class="list__link">Dons financiers</a></li>
-                        <li class="list__item"><a href="<?= home_url("/nous-soutenir/#volunteer") ?>" class="list__link">Devenir bénévole</a></li>
-                    </ul>
-                </div>
-                <nav class="footer__nav">
+                <?php get_sidebar('location'); ?>
+                <?php get_sidebar('support'); ?>
+                <nav class="footer__nav footer__container">
                     <h3 class="footer__subtitle">Navigation</h3>
                     <ul class="footer__list list">
                         <?php foreach (dw_get_navigation_links('main') as $link): ?>
@@ -50,6 +36,6 @@
 
     </footer>
 </div>
-<script src="<?= dw_asset('js/main.js') ?>"></script>
+<?php wp_footer(); ?>
 </body>
 </html>

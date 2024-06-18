@@ -1,0 +1,29 @@
+.houses {
+  display: flex;
+  flex-direction: column;
+
+  &__content {
+    text-align: center;
+    max-width: 487px;
+    margin: 0 auto 2em auto;
+  }
+}
+
+
+@media screen and (min-width: $tablet) {
+  .houses {
+    &__container {
+      gap: 2rem;
+    }
+  }
+}
+
+
+@media screen and (min-width: $laptop) {
+  .houses {
+    padding-top: 0;
+    &__content {
+      margin-bottom: 5em;
+    }
+  }
+}
