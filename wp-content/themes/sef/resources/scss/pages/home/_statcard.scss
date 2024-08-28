@@ -1,7 +1,7 @@
 .statcard {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.2em;
+  margin-bottom: 2.5rem;
   text-align: left;
 
   &__number {
@@ -14,6 +14,12 @@
 
   &__text {
     max-width: 150px;
+  }
+}
+
+@media screen and (min-width: $tablet){
+  .statcard {
+    margin-bottom: 0;
   }
 }
 

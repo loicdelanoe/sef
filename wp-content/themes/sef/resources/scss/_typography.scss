@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap');
+
 @font-face {
   font-family: "Raleway";
   src: url("../fonts/Raleway-Regular.ttf") ;
@@ -23,7 +25,7 @@
 }
 
 body {
-  font-family: "Raleway", Helvetica, Arial, sans-serif;
+  font-family: "Cabin", Helvetica, Arial, sans-serif;
   color: $text-color;
 }
 
@@ -32,6 +34,7 @@ p {
 }
 
 h1, h2, h3, h4 {
+  font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
 
@@ -78,13 +81,7 @@ a {
 }
 
 a.active {
-  color: $active-text-color;
   font-weight: bold;
-
-  &:after {
-    width: 100%;
-    background-color: $active-text-color;
-  }
 }
 
 strong {
@@ -115,6 +112,15 @@ input, textarea, button {
 @media screen and (min-width: $laptop) {
   h2 {
     font-size: 46px;
+  }
+
+  a.active {
+    color: $active-text-color;
+
+    &:after {
+      width: 100%;
+      background-color: $active-text-color;
+    }
   }
 
   a.active {

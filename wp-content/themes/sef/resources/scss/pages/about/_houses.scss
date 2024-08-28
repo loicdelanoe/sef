@@ -3,10 +3,38 @@
   flex-direction: column;
   padding-bottom: 0;
 
+  &__container {
+    &--upper {
+      padding: 100px 24px;
+    }
+
+    &--bg {
+      padding: 45px 0;
+
+      &:nth-child(even) {
+        background-color: $text-color;
+        color: $alt-text-color;
+
+        & > .house {
+          flex-direction: row-reverse;
+        }
+      }
+
+      &:nth-child(odd) {
+        .house__address {
+          border-bottom: 1px solid $text-color;
+        }
+      }
+    }
+  }
+
   &__content {
-    text-align: center;
     max-width: 487px;
-    margin: 0 auto 2em auto;
+  }
+
+  &__title {
+    text-align: left;
+    margin: 0 0 1em 0;
   }
 }
 
@@ -15,6 +43,20 @@
   .houses {
     &__container {
       gap: 2rem;
+
+      &--upper {
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        max-width: 1200px;
+        width: 100%;
+        gap: 5rem;
+      }
+
+      &--bg {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
     }
   }
 }

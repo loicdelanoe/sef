@@ -31,8 +31,8 @@
     box-sizing: content-box;
     display: flex;
     flex-direction: column;
-    padding: 1.4em;
-    font-size: 1.5em;
+    padding: 1em;
+    font-size: 1.2em;
 
     &:after {
       content: '';
@@ -43,22 +43,15 @@
       margin-top: 2px;
     }
 
-    &:hover:after,
-    &:focus:after {
-      width: 100%;
-    }
-
     &--contact {
-      margin: 3rem 24px 0 24px;
       justify-self: flex-start;
-      padding-top: 1.3rem;
-      padding-bottom: 1.3rem;
-      display: flex;
-      justify-content: space-between;
+      margin: 2em 1em;
+      padding: 1em;
     }
   }
 
   &__container {
+    padding-top: 4rem;
     z-index: 9;
     position: fixed;
     display: flex;
@@ -85,11 +78,17 @@
       min-height: auto;
       width: auto;
       background-color: transparent;
+      padding-top: 0;
     }
 
     &__link {
       font-size: 1.1em;
       padding: 1em;
+
+      &:hover:after,
+      &:focus:after {
+        width: 100%;
+      }
 
       &--alt {
         font-size: 1.1em;

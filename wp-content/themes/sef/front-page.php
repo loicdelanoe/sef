@@ -19,7 +19,7 @@
                 <h2 class="news__title" data-animation="show-up" data-variant="secondary">Nos dernières
                     <span>Actualités</span>
                 </h2>
-                <a class="cta" href="<?= home_url('actualite') ?>" data-animation="show-up">Toutes l'actus</a>
+                <a class="cta" href="<?= home_url('actualite') ?>" data-animation="show-up">Voir plus</a>
             </div>
             <?php
             $last_post = new WP_Query([

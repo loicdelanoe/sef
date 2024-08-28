@@ -36,11 +36,11 @@
             <span class="sro">Menu</span>
             <svg class="burger__container" focusable="false" aria-hidden="true" width="22" height="22"
                  viewBox="0 0 22 17" xmlns="http://www.w3.org/2000/svg">
-                <rect class="burger__line" width="22" height="2" fill="<?= is_front_page() ? '#F3F9FE' : '#4F72A5' ?>"/>
+                <rect class="burger__line" width="22" height="2" fill="<?= is_front_page() ? '#FFF9F7' : '#272727' ?>"/>
                 <rect class="burger__line" y="6.75" width="22" height="2"
-                      fill="<?= is_front_page() ? '#F3F9FE' : '#4F72A5' ?>"/>
+                      fill="<?= is_front_page() ? '#FFF9F7' : '#272727' ?>"/>
                 <rect class="burger__line" y="13.5" width="22" height="2"
-                      fill="<?= is_front_page() ? '#F3F9FE' : '#4F72A5' ?>"/>
+                      fill="<?= is_front_page() ? '#FFF9F7' : '#272727' ?>"/>
             </svg>
         </label>
         <ul class="nav__container">
