@@ -18,8 +18,6 @@
                     <address><?= get_field('address') ?></address>
                 </dd>
             </dl>
-            <p class="contact__text">Vous souhaitez d’autres informations&nbsp;?</p>
-            <a href="<?= home_url("/nous-soutenir") ?>" class="cta">Nous soutenir</a>
         </article>
         <article class="contact__lower contactform" data-animation="show-up">
             <h2 class="sro">Formulaire de contact</h2>

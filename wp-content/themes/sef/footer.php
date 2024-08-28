@@ -30,7 +30,8 @@
         <div class="footer__lower juridic">
             <ul class="juridic__container">
                 <li class="juridic__item">© 2024 SEF. Tous droits réservés.</li>
-                <li class="juridic__item"><a class="juridic__link" href="<?= home_url("mentions-legales") ?>">Mentions légales</a></li>
+                <li class="juridic__item">Créé par <a class="juridic__link--creator" target="_blank" href="https://loicdelanoe.com">Loïc Delanoë</a></li>
+                <li class="juridic__item juridic__legal"><a class="juridic__link" href="<?= home_url("mentions-legales") ?>">Mentions légales</a></li>
             </ul>
         </div>
 

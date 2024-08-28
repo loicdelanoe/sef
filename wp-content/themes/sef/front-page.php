@@ -16,8 +16,10 @@
         </div>
         <section class="news">
             <div class="news__container--title">
-                <h2 class="news__title" data-animation="show-up" data-variant="secondary">Nos dernières <span>Actualités</span></h2>
-                <a class="cta" href="<?= home_url('actualite') ?>">Toutes l'actus</a>
+                <h2 class="news__title" data-animation="show-up" data-variant="secondary">Nos dernières
+                    <span>Actualités</span>
+                </h2>
+                <a class="cta" href="<?= home_url('actualite') ?>" data-animation="show-up">Toutes l'actus</a>
             </div>
             <?php
             $last_post = new WP_Query([
@@ -44,7 +46,8 @@
                     <a class="newscard__link newscard__link--last" href="<?= get_permalink() ?>"><span
                                 class="newscard__view">Voir l'article</span></a>
                 </article>
-            <?php endwhile; endif; ?>
+            <?php endwhile; endif;
+            wp_reset_postdata(); ?>
             <div class="news__container--grid">
                 <?php
                 $posts = new WP_Query([
@@ -68,7 +71,8 @@
                         <a class="newscard__link" href="<?= get_permalink() ?>"><span
                                     class="sro">Visiter l'article</span></a>
                     </article>
-                <?php endwhile; endif; ?>
+                <?php endwhile; endif;
+                wp_reset_postdata(); ?>
             </div>
         </section>
         <div class="bg">
@@ -89,11 +93,12 @@
                         ?>
 
                         <li class="statistics__item statcard" data-animation="show-up">
-                            <h3 class="statcard__number"><?= get_field('statistic') ?></h3>
+                            <span class="statcard__number"><?= get_field('statistic') ?></span>
                             <p class="statcard__text"><?= get_field('text') ?></p>
                         </li>
 
-                    <?php endwhile; endif; ?>
+                    <?php endwhile; endif;
+                    wp_reset_postdata(); ?>
                 </ul>
             </section>
         </div>
@@ -119,16 +124,11 @@
                         </div>
                     </li>
 
-                <?php endwhile; endif; ?>
+                <?php endwhile; endif;
+                wp_reset_postdata(); ?>
             </ul>
         </section>
-        <section class="help">
-            <h2 class="help__title" data-animation="show-up">Votre générosité nous permet d’avancer</h2>
-            <div class="help__container" data-animation="show-up">
-                <a href="<?= home_url("/nous-soutenir") ?>" class="cta">Nous soutenir</a>
-                <a href="<?= home_url("/contact") ?>" class="cta" data-variant="tertiary">Nous contacter</a>
-            </div>
-        </section>
+        <?= get_template_part('parts/section', 'help') ?>
     </main>
 
 <?php get_footer() ?>

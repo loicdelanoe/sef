@@ -1,19 +1,23 @@
-$text-color: #283345;
-$alt-text-color: #F3F9FE;
-$active-text-color: #4F72A5;
+$text-color: #272727;
+$alt-text-color: #FFF9F7;
+
+$active-text-color: #272727;
 $white: #FFFFFF;
 
-$background-color: #283345;
+$background-color: #272727;
 
-$cta-background-color: #4F72A5;
-$cta-text-color: #F3F9FE;
-$alt-cta-text-color: #4F72A5;
+// CTA
 
-$hover-cta-background-color: rgb(45, 106, 141);
+$cta-background-color: #CA6F3C;
+$cta-text-color: #FFF9F7;
 
-$alt-cta-background-color: #F3F9FE;
+$hover-cta-background-color: #E29163;
 
-$card-color: #E5EEF5;
+$alt-cta-background-color: #FFF9F7;
+
+// CARD - INPUT
+
+$card-color: #FBE9DF;
 $input-color: #E5EEF5;
 
 $border-color: #283345;

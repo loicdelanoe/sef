@@ -12,6 +12,7 @@
         <h2 class="material__title" data-animation="show-up"><?= get_field('material_title') ?></h2>
         <div class="material__content" data-tag="wysiwyg" itemprop="description" data-animation="show-up">
             <?= get_field('material_text') ?>
+            <a href="<?= home_url('/magasins') ?>" class="cta material__cta">Nos magasins</a>
         </div>
         <?= wp_get_attachment_image(get_field('material_image'), 'full', false, [
             'class' => 'material__image',
@@ -31,11 +32,15 @@
         </section>
     </div>
     <section class="volunteer" id="volunteer">
-        <h2 class="volunteer__title" data-animation="show-up">Devenir bénévole</h2>
-        <p class="volunteer__text" itemprop="description" data-animation="show-up">Rejoignez notre équipe de bénévoles
-            au SEF de Huy et faites une différence concrète. En donnant un peu de votre temps, vous apportez un soutien
-            précieux et contribuez à une communauté plus solidaire.</p>
-        <a href="<?= home_url() . "/contact" ?>" class="cta" data-animation="show-up">Contact</a>
+        <div class="volunteer__container">
+            <h2 class="volunteer__title" data-animation="show-up"><?= get_field('volunteer_title') ?></h2>
+            <div class="volunteer__text" itemprop="description" data-animation="show-up"><?= get_field('volunteer_content') ?></div>
+            <a href="<?= home_url() . "/contact" ?>" class="cta" data-animation="show-up">Contactez-nous</a>
+        </div>
+        <?= wp_get_attachment_image(get_field('volunteer_image'), 'full', false, [
+            'class' => 'volunteer__img',
+            'data-animation' => 'show-up'
+        ]) ?>
     </section>
 </main>
 

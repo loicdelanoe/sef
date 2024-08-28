@@ -8,6 +8,12 @@
 
   &__content {
     margin-bottom: 1.2em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__cta {
+    align-self: flex-start;
   }
 }
 

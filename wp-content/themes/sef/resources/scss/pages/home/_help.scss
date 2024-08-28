@@ -1,18 +1,56 @@
 .help {
   display: flex;
   flex-direction: column;
-  align-items: center;
   position: relative;
   padding: 90px 24px;
 
+  &__title {
+    text-align: left;
+    margin: 0 0 1em 0;
+  }
+
+  &__text {
+    max-width: 32rem;
+    margin-bottom: 1.8em;
+  }
+
   &__container {
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    margin-bottom: 3rem;
+
+    &--cta {
+      display: flex;
+      gap: 10px;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    max-height: 250px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .help {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+
+    &__img {
+      max-width: 340px;
+      max-height: 35rem;
+    }
   }
 }
 
 @media screen and (min-width: $laptop) {
   .help {
     padding: 172px 24px;
+
+    &__img {
+      max-width: 500px;
+      height: auto;
+    }
   }
 }

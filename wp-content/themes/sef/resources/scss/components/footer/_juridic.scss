@@ -10,13 +10,23 @@
   &__item {
     margin-bottom: 0.5em;
   }
+
+  &__link {
+    &--creator {
+      text-decoration: underline;
+    }
+  }
 }
 
 @media screen and (min-width: $tablet) {
   .juridic {
     &__container {
       flex-direction: row;
-      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    &__legal {
+      margin-left: auto;
     }
   }
 }

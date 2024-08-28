@@ -1,6 +1,7 @@
 .houses {
   display: flex;
   flex-direction: column;
+  padding-bottom: 0;
 
   &__content {
     text-align: center;
@@ -21,7 +22,6 @@
 
 @media screen and (min-width: $laptop) {
   .houses {
-    padding-top: 0;
     &__content {
       margin-bottom: 5em;
     }

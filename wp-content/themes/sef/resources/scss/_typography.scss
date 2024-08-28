@@ -49,6 +49,10 @@ h2 {
     & > span {
       font-weight: bold;
     }
+
+    & > strong {
+      font-weight: bold;
+    }
   }
 }
 
@@ -78,7 +82,7 @@ a.active {
   font-weight: bold;
 
   &:after {
-    width: 20px;
+    width: 100%;
     background-color: $active-text-color;
   }
 }
@@ -119,7 +123,7 @@ input, textarea, button {
       font-weight: bold;
 
       &:after {
-        width: 20px;
+        width: 100%;
         background-color: $alt-text-color;
       }
     }

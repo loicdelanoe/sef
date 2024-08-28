@@ -11,49 +11,31 @@
   text-align: center;
   transition: .3s;
 
-  &:after {
-    content: "\ea3c";
-    font-family: 'icomoon' !important;
-    speak: never;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    transition: .3s;
-  }
-
-  &:hover:after {
-      transform: translateX(5px);
-  }
-
   &:hover {
-    background-color: $text-color;
-    border-color: $text-color;
+    background-color: #E29163;
+    border-color: #E29163;
+    color: $text-color;
   }
 
   &[data-variant="secondary"] {
     border: 1px solid $alt-cta-background-color;
-    background-color: transparent;
+    background-color: $alt-cta-background-color;
+    color: $text-color;
 
     &:hover {
-      background-color: $cta-text-color;
-      color: $alt-cta-text-color;
+      background-color: transparent;
+      color: $alt-text-color;
     }
   }
 
   &[data-variant="tertiary"] {
-    border: 1px solid $cta-background-color;
-    color: $alt-cta-text-color;
-    background-color: transparent;
+    border: 1px solid $text-color;
+    background-color: $text-color;
+    color: $alt-text-color;
 
     &:hover {
-      background-color: $alt-cta-text-color;
-      color: $cta-text-color;
+      background-color: transparent;
+      color: $text-color;
     }
   }
 }
