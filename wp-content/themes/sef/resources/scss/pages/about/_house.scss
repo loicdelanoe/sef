@@ -14,7 +14,8 @@
 
   &__image {
     object-fit: cover;
-    max-width: 482px;
+    width: 100%;
+    //max-width: 482px;
     max-height: 400px;
   }
 }
@@ -36,6 +37,12 @@
     &__image {
       height: 100%;
       max-height: 650px;
+      width: 100%;
+      min-width: 400px;
+
+      &--child {
+        height: auto;
+      }
     }
   }
 }
@@ -43,6 +50,7 @@
 @media screen and (min-width: $laptop) {
   .house {
     padding-bottom: 0;
+    gap: 5rem;
 
     &__image {
       order: -1;

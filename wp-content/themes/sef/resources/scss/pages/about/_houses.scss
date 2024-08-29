@@ -5,7 +5,7 @@
 
   &__container {
     &--upper {
-      padding: 100px 24px;
+      padding: 45px 24px;
     }
 
     &--bg {
@@ -15,6 +15,16 @@
         background-color: $text-color;
         color: $alt-text-color;
 
+        .img__container {
+          position: relative;
+          z-index: 10;
+
+          &:after {
+            background-image: radial-gradient($alt-text-color 1.25px, rgba(255, 255, 255, 0) 1.25px);
+            transform: translate(5%, 5%);
+          }
+        }
+
         & > .house {
           flex-direction: row-reverse;
         }
@@ -23,6 +33,12 @@
       &:nth-child(odd) {
         .house__address {
           border-bottom: 1px solid $text-color;
+        }
+
+        .img__container {
+          &:after {
+            transform: translate(-5%, 5%);
+          }
         }
       }
     }
@@ -64,6 +80,12 @@
 
 @media screen and (min-width: $laptop) {
   .houses {
+    &__container {
+      &--upper {
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+    }
     &__content {
       margin-bottom: 5em;
     }

@@ -28,8 +28,11 @@
       margin: 0;
     }
 
-    &__image {
+    .img__container:has(&__image) {
       order: 1;
+    }
+
+    &__image {
       object-fit: cover;
       height: 100%;
     }

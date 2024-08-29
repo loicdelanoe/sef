@@ -7,20 +7,25 @@
         <section class="mission">
             <h2 class="mission__title" data-animation="show-up" data-variant="secondary">La mission
                 qui<span>Nous animent</span></h2>
-            <?= wp_get_attachment_image(get_field('image'), 'medium', false, [
-                'class' => 'mission__image',
-                'data-animation' => 'show-up'
-            ]) ?>
+            <div class="img__container" data-animation="show-up" data-variant="right">
+                <?= wp_get_attachment_image(get_field('image'), 'medium', false, [
+                    'class' => 'mission__image',
+                    'data-animation' => 'show-up'
+                ]) ?>
+            </div>
             <div class="mission__content" itemprop="description" data-animation="show-up"
                  data-tag="wysiwyg"><?= get_field('content') ?></div>
         </section>
         <section class="history">
             <h2 class="history__title" data-animation="show-up" data-variant="secondary">L'Évolution de
                 <span>Notre Association</span></h2>
-            <?= wp_get_attachment_image(get_field('history_image'), 'medium', false, [
-                'class' => 'history__image',
-                'data-animation' => 'show-up'
-            ]) ?>
+            <div class="img__container" data-animation="show-up">
+                <?= wp_get_attachment_image(get_field('history_image'), 'medium', false, [
+                    'class' => 'history__image',
+                    'data-animation' => 'show-up',
+                    'data-variant' => 'lines'
+                ]) ?>
+            </div>
             <div class="mission__content" itemprop="description"
                data-animation="show-up" data-tag="wysiwyg"><?= get_field('history_content') ?></div>
         </section>

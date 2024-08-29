@@ -13,6 +13,7 @@
 @import 'components/header';
 @import 'components/nav';
 @import 'components/burger';
+@import 'components/img';
 @import 'components/footer/footer';
 @import 'components/footer/sidebar';
 @import 'components/footer/social';
@@ -39,6 +40,9 @@
 @import 'pages/support/material';
 @import 'pages/support/financial';
 @import 'pages/support/volunteer';
+
+@import 'pages/shops/shops';
+@import 'pages/shops/shop';
 
 @import 'pages/contact/contact';
 @import 'pages/contact/contactform';

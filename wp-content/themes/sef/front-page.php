@@ -10,7 +10,7 @@
                 <p class="hero__quote" itemprop="description" data-animation="show-up"><?= get_field('quote') ?></p>
                 <div class="hero__container" data-animation="show-up">
                     <a href="<?= home_url('/nous-soutenir') ?>" class="cta">Faire un don</a>
-                    <a href="<?= home_url('/contact') ?>" class="cta" data-variant="secondary">Nous contacter</a>
+                    <a href="<?= home_url('/magasins') ?>" class="cta" data-variant="secondary">Nos magasins</a>
                 </div>
             </section>
         </div>

@@ -14,10 +14,12 @@
             <?= get_field('material_text') ?>
             <a href="<?= home_url('/magasins') ?>" class="cta material__cta">Nos magasins</a>
         </div>
-        <?= wp_get_attachment_image(get_field('material_image'), 'full', false, [
-            'class' => 'material__image',
-            'data-animation' => 'show-up'
-        ]) ?>
+        <div class="img__container" data-variant="right">
+            <?= wp_get_attachment_image(get_field('material_image'), 'full', false, [
+                'class' => 'material__image',
+                'data-animation' => 'show-up'
+            ]) ?>
+        </div>
     </section>
     <div class="bg">
         <section class="financial" id="financial">
@@ -25,10 +27,12 @@
             <div class="financial__content" data-tag="wysiwyg" itemprop="description" data-animation="show-up">
                 <?= get_field('financial_text') ?>
             </div>
-            <?= wp_get_attachment_image(get_field('financial_image'), 'full', false, [
-                'class' => 'financial__image',
-                'data-animation' => 'show-up'
-            ]) ?>
+            <div class="img__container" data-variant="alt">
+                <?= wp_get_attachment_image(get_field('financial_image'), 'full', false, [
+                    'class' => 'financial__image',
+                    'data-animation' => 'show-up'
+                ]) ?>
+            </div>
         </section>
     </div>
     <section class="volunteer" id="volunteer">
@@ -37,10 +41,12 @@
             <div class="volunteer__text" itemprop="description" data-animation="show-up" data-tag="wysiwyg"><?= get_field('volunteer_content') ?></div>
             <a href="<?= home_url() . "/contact" ?>" class="cta" data-animation="show-up">Contactez-nous</a>
         </div>
-        <?= wp_get_attachment_image(get_field('volunteer_image'), 'full', false, [
-            'class' => 'volunteer__img',
-            'data-animation' => 'show-up'
-        ]) ?>
+        <div class="img__container volunteer__img" data-variant="right">
+            <?= wp_get_attachment_image(get_field('volunteer_image'), 'full', false, [
+                'class' => 'volunteer__img--child',
+                'data-animation' => 'show-up'
+            ]) ?>
+        </div>
     </section>
 </main>
 

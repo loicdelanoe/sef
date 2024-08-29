@@ -4,6 +4,8 @@ if (!session_id()) {
     session_start();
 }
 
+add_theme_support('post-thumbnails');
+
 // Import helpers files from /inc folder
 require_once(get_template_directory() . '/inc/helpers.php');
 require_once(get_template_directory() . '/inc/clean-header.php');

@@ -1,0 +1,42 @@
+.img {
+  &__container {
+    display: flex;
+    position: relative;
+    width: auto;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: $tablet){
+  .img {
+    &__container {
+      &:after {
+        position: absolute;
+        z-index: -1;
+        display: block;
+        content: "";
+        width: 100%;
+        min-height: 100%;
+        transform: translate(-10%, 10%);
+        background-color: transparent;
+        opacity: 0.7;
+        background-image: radial-gradient($cta-background-color 1.25px, rgba(255, 255, 255, 0) 1.25px);
+        background-size: 25px 25px;
+      }
+
+      &[data-variant="right"] {
+        position: relative;
+        &:after {
+          transform: translate(10%, 10%);
+        }
+      }
+
+      &[data-variant="alt"] {
+        z-index: 10;
+        &:after {
+          background-image: radial-gradient($alt-text-color 1.25px, rgba(255, 255, 255, 0) 1.25px);
+        }
+      }
+    }
+  }
+}
