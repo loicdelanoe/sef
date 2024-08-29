@@ -22,22 +22,45 @@
     border-bottom: 1px solid $alt-border-color;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
     gap: 10em;
     transition: .3s ease-out;
+    position: relative;
 
     &:hover,
     &:focus {
-      padding-left: 1.5rem;
+      padding-left: 0.8rem;
+      font-weight: bold;
+    }
+
+    &:before {
+      position: relative;
+      z-index: 1;
+      transition: .3s ease-out;
     }
 
     &:after {
-      content: url("../img/arrow.svg");
-      transition: transform .2s ease-out;
+      display: block;
+      content: "";
+      position: absolute;
+      background-color: #fff;
+      right: 0;
+      width: 0;
+      top: 0;
+      bottom: 0;
+      transition: .3s ease-out;
     }
 
     &:hover:after,
     &:focus:after {
-        transform: rotate(45deg);
+      width: 44px;
+    }
+
+    &:hover:before,
+    &:focus:before {
+      transform: rotate(45deg);
+      color: $text-color;
     }
   }
 }

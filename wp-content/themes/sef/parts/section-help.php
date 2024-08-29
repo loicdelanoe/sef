@@ -4,7 +4,7 @@
         <p class="help__text" data-animation="show-up">Votre soutien est essentiel pour nous permettre de continuer notre mission d'accompagnement et d'entraide auprès des personnes les plus vulnérables.</p>
         <div class="help__container--cta" data-animation="show-up">
             <a href="<?= home_url("/nous-soutenir") ?>" class="cta">Nous soutenir</a>
-            <a href="<?= home_url("/contact") ?>" class="cta" data-variant="tertiary">Nos magasins</a>
+            <a href="<?= home_url("/magasins") ?>" class="cta" data-variant="tertiary">Nos magasins</a>
         </div>
     </div>
     <div class="img__container" data-variant="right">

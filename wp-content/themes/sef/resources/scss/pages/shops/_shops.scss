@@ -24,8 +24,17 @@
         background-color: $text-color;
         color: $alt-text-color;
 
-        .shop__phone:after {
+        .shop__content:before {
           background-color: $alt-text-color;
+        }
+
+        .img__container {
+          position: relative;
+          z-index: 1;
+
+          &:after {
+            background-image: radial-gradient($alt-text-color 1.25px, rgba(255, 255, 255, 0) 1.25px);
+          }
         }
       }
     }

@@ -34,19 +34,22 @@
                 <div class="more__upper" data-animation="show-up">
                     <h2 class="more__title">Besoin de plus d'informations ?</h2>
                     <p class="more__text">Apprenez en plus sur le <span itemprop="name">SEF</span> et ce que nous
-                        faisons
+                        faisons.
                     </p>
                 </div>
                 <ul class="more__container">
                     <li class="more__item" data-animation="show-up"><a
                                 href="<?= home_url('/nous-soutenir/#material') ?>"
-                                class="more__link">Dons matériels</a></li>
+                                class="more__link icon-arrow-up-right2">Dons matériels</a></li>
                     <li class="more__item" data-animation="show-up"><a
                                 href="<?= home_url('/nous-soutenir/#financial') ?>"
-                                class="more__link">Dons financiers</a></li>
+                                class="more__link icon-arrow-up-right2">Dons financiers</a></li>
                     <li class="more__item" data-animation="show-up"><a
                                 href="<?= home_url('/nous-soutenir/#volunteer') ?>"
-                                class="more__link">Devenir bénévole</a></li>
+                                class="more__link icon-arrow-up-right2">Devenir bénévole</a></li>
+                    <li class="more__item" data-animation="show-up"><a
+                                href="https://www.facebook.com/p/D%C3%A9p%C3%B4t-Du-SEF-100064429671940/?locale=fr_FR"
+                                class="more__link icon-arrow-up-right2" target="_blank">Le dépôt du SEF</a></li>
                 </ul>
             </section>
         </div>
