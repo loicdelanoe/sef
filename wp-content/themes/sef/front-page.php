@@ -44,7 +44,7 @@
                         </div>
                     </div>
                     <a class="newscard__link newscard__link--last" href="<?= get_permalink() ?>"><span
-                                class="newscard__view">Voir l'article</span></a>
+                                class="newscard__view icon-arrow-right2">Voir l'article</span></a>
                 </article>
             <?php endwhile; endif;
             wp_reset_postdata(); ?>

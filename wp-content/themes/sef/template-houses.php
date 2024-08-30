@@ -30,7 +30,7 @@
                         <div class="house__container" data-animation="show-up">
                             <h3 class="house__title" data-variant="secondary">Notre <?= get_field('name') ?> <span>Maison d'accueil</span>
                             </h3>
-                            <address class="house__address icon-location"><?= get_field('address') ?></address>
+                            <address class="house__address icon-location"><a class="house__link" href="<?= "https://google.be/maps/place/" . get_field('address') ?>" target="_blank"><?= get_field('address') ?></a></address>
                             <div class="house__content" data-tag="wysiwyg"><?= get_field('content') ?></div>
                         </div>
                         <div class="img__container house__image">

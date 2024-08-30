@@ -29,7 +29,7 @@
                         </div>
                         <div class="shop__container" data-animation="show-up">
                             <h3 class="shop__title"><?= get_the_title() ?></h3>
-                            <address class="shop__address icon-location"><?= get_field('address') ?></address>
+                            <address class="shop__address icon-location"><a class="house__link" href="<?= "https://google.be/maps/place/" . get_field('address') ?>" target="_blank"><?= get_field('address') ?></a></address>
                             <a class="shop__phone icon-phone" href="tel:<?= get_field('phone') ?>"><?= get_field('phone') ?></a>
                             <div class="shop__content" data-tag="wysiwyg"><?= get_field('description') ?></div>
                         </div>

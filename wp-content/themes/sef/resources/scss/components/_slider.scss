@@ -9,37 +9,40 @@
     font-size: 1.6em;
     padding: 1em;
     cursor: pointer;
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: .3s;
+
+    &:after {
+      display: block;
+      transition: .3s ease-out;
+    }
 
     &[data-id="prev"]:after {
-      content: "\ea40";
-      font-family: 'icomoon' !important;
-      speak: never;
-      font-style: normal;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-      line-height: 1;
+      content: "\ea3c";
+      transform: rotate(180deg);
+    }
 
-      /* Better Font Rendering =========== */
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      transition: .3s;
+    &[data-id="prev"]:hover:after,
+    &[data-id="prev"]:focus:after {
+      transform: rotate(180deg) translateX(15px);
     }
 
     &[data-id="next"]:after {
       content: "\ea3c";
-      font-family: 'icomoon' !important;
-      speak: never;
-      font-style: normal;
-      font-weight: normal;
-      font-variant: normal;
-      text-transform: none;
-      line-height: 1;
+    }
 
-      /* Better Font Rendering =========== */
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      transition: .3s;
+    &[data-id="next"]:hover:after,
+    &[data-id="next"]:focus:after {
+      transform: translateX(15px);
     }
   }
 }

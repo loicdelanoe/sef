@@ -11,7 +11,8 @@
   text-align: center;
   transition: .3s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: #E29163;
     border-color: #E29163;
     color: $text-color;
@@ -22,7 +23,8 @@
     background-color: $alt-cta-background-color;
     color: $text-color;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: transparent;
       color: $alt-text-color;
     }
@@ -33,7 +35,8 @@
     background-color: $text-color;
     color: $alt-text-color;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: transparent;
       color: $text-color;
     }

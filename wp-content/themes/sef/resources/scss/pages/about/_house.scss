@@ -15,8 +15,11 @@
   &__image {
     object-fit: cover;
     width: 100%;
-    //max-width: 482px;
     max-height: 400px;
+  }
+
+  &__link {
+  color: inherit;
   }
 }
 

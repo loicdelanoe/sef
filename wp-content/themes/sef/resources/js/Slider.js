@@ -22,8 +22,8 @@ export class Slider {
     createSliderButtons() {
         this.section.insertAdjacentHTML('beforeend', `
         <div class="slider__container--button">
-            <span class="slider__button" data-id="prev"><span class="sro">Précédent</span></span>
-            <span class="slider__button" data-id="next"><span class="sro">Suivant</span></span>
+            <span class="slider__button" data-id="prev" tabindex="0"><span class="sro">Précédent</span></span>
+            <span class="slider__button" data-id="next" tabindex="0"><span class="sro">Suivant</span></span>
         </div>`)
 
         this.slider.style.width = `${this.setSliderWidth()}px`
@@ -58,6 +58,37 @@ export class Slider {
                         left: this.scrollValue,
                         behavior: 'smooth',
                     });
+                }
+            });
+
+            button.addEventListener('keyup', (e) => {
+                if (e.key === 'Enter') {
+
+                    if (button.dataset.id === 'next') {
+                        this.scrollValue += this.card.offsetWidth + this.gap;
+
+                        if (this.scrollValue > this.slider.scrollWidth - this.slider.clientWidth) {
+                            this.scrollValue = 0;
+                        }
+
+                        this.slider.scrollTo({
+                            left: this.scrollValue,
+                            behavior: 'smooth',
+                        });
+                    }
+
+                    if (button.dataset.id === 'prev') {
+                        this.scrollValue -= this.card.offsetWidth + this.gap;
+
+                        if (this.scrollValue < 0) {
+                            this.scrollValue = this.scrollMax;
+                        }
+
+                        this.slider.scrollTo({
+                            left: this.scrollValue,
+                            behavior: 'smooth',
+                        });
+                    }
                 }
             });
         });

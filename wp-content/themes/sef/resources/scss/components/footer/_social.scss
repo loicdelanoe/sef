@@ -12,7 +12,8 @@
     text-align: center;
     transition: .3s;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: $alt-text-color;
       color: $text-color;
     }
