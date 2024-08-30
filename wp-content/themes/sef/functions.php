@@ -10,12 +10,13 @@ add_theme_support('post-thumbnails');
 require_once(get_template_directory() . '/inc/helpers.php');
 require_once(get_template_directory() . '/inc/clean-header.php');
 require_once(get_template_directory() . '/inc/sidebar.php');
-require_once(get_template_directory() . '/inc/ContactForm.php');
 require_once(get_template_directory() . '/inc/custom-post-type.php');
 
 // Handle contact form submit
 add_action('admin_post_custom_contact_form', 'dw_contact_form_controller');
 add_action('admin_post_nopriv_custom_contact_form', 'dw_contact_form_controller');
+
+require_once(get_template_directory() . '/inc/ContactForm.php');
 
 // Disable Gutenberg editor
 add_filter('use_block_editor_for_post', '__return_false');

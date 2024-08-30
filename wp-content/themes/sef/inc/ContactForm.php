@@ -1,5 +1,7 @@
 <?php
 
+namespace inc;
+
 class ContactForm
 {
     public function __construct($data)
@@ -9,11 +11,11 @@ class ContactForm
         $_SESSION['feedback'] = '';
 
         $rules = [
-            "name" => ['required'],
             "fullname" => ['required'],
             "email" => ['required', 'email'],
             "subject" => ['required'],
             "message" => ['required'],
+            "g-recaptcha-response" => ['recaptcha'],
         ];
 
         self::validate($data, $rules);
@@ -21,9 +23,8 @@ class ContactForm
         if (count($_SESSION['errors']) > 0) {
             $_SESSION['old'] = $data;
         } else {
+            $_SESSION['feedback'] = __("Votre message a bien été envoyé");
             self::sendMail($data);
-
-            $_SESSION['feedback'] = "Merci&nbsp;! Votre message a bien été envoyé :)";
         }
 
         wp_redirect(wp_get_referer());
@@ -56,7 +57,7 @@ class ContactForm
     private static function required(string $key, array $data): bool
     {
         if (empty($data[$key])) {
-            $_SESSION['errors'][$key] = "Ce champ est requis";
+            $_SESSION['errors'][$key] = __("Ce champ est requis");
             return false;
         }
 
@@ -66,7 +67,7 @@ class ContactForm
     private static function email(string $key, array $data): bool
     {
         if (!filter_var($data[$key], FILTER_VALIDATE_EMAIL)) {
-            $_SESSION['errors'][$key] = "L'adresse mail n'est pas valide";
+            $_SESSION['errors'][$key] = __("L'adresse mail n'est pas valide");
             return false;
         }
         return true;
@@ -74,11 +75,28 @@ class ContactForm
 
     private static function sendMail(array $data): void
     {
-        $headers[] = "From {$data['name']} {$data['lastname']}: {$data['email']}";
-        $headers[] = "Reply-To: {$data['email']}";
+        wp_mail(get_bloginfo('admin_email'), $data['subject'], $data['message'] );
+    }
 
-        $subject = $data['subject'];
+    private static function recaptcha(string $key, array $data)
+    {
+        $secret_key = '6LdCETIqAAAAAJpcaPQEUxrg2IJRJ3Y9p-xnxrHm';
 
-        wp_mail(get_bloginfo('admin_email'), $subject, $data['message'], $headers);
+        $response = wp_remote_post("https://www.google.com/recaptcha/api/siteverify", [
+            'body' => [
+                'secret' => $secret_key,
+                'response' => $data[$key],
+            ]
+        ]);
+
+        $response_body = wp_remote_retrieve_body($response);
+        $result = json_decode($response_body, true);
+
+        if (!$result['success']) {
+            $_SESSION['errors'][$key] = __("La vérification reCAPTCHA a échoué. Veuillez réessayer.");
+            return false;
+        }
+
+        return true;
     }
 }

@@ -240,12 +240,24 @@ img {
   content: "\e947";
 }
 
-.icon-facebook:before {
-  content: "\ea90";
+.icon-notification:before {
+  content: "\ea08";
+}
+
+.icon-checkmark:before {
+  content: "\ea10";
 }
 
 .icon-arrow-up-right2:before {
   content: "\ea3b";
+}
+
+.icon-arrow-right2:before {
+  content: "\ea3c";
+}
+
+.icon-facebook:before {
+  content: "\ea90";
 }
 
 .no-opacity {
@@ -357,6 +369,43 @@ img {
 }
 [data-tag=wysiwyg] h3 {
   font-size: 1.3em;
+}
+
+[data-tag=wysiwyg-post] * {
+  text-align: left;
+}
+[data-tag=wysiwyg-post] ul {
+  list-style: initial;
+  padding: 0 0.5em;
+  margin-left: 1em;
+}
+[data-tag=wysiwyg-post] li {
+  margin: 1em 0;
+}
+[data-tag=wysiwyg-post] p {
+  margin-bottom: 1.8em;
+}
+[data-tag=wysiwyg-post] h2, [data-tag=wysiwyg-post] h3, [data-tag=wysiwyg-post] h4, [data-tag=wysiwyg-post] h5, [data-tag=wysiwyg-post] h6 {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0.6em;
+}
+[data-tag=wysiwyg-post] h3 {
+  font-size: 1.3em;
+}
+[data-tag=wysiwyg-post] img {
+  max-width: 450px;
+  height: auto;
+  float: left;
+  margin: 1rem 1rem 1rem 0;
+}
+[data-tag=wysiwyg-post] img:nth-child(even) {
+  float: right;
+  margin: 1rem 0 1rem 1rem;
+}
+[data-tag=wysiwyg-post] a {
+  text-decoration: underline;
+  opacity: 0.8;
 }
 
 .bg {
@@ -1712,6 +1761,19 @@ input[id=burger]:checked ~ .burger .burger__line:nth-child(3) {
 .field__error {
   color: #D04343;
   margin-top: 0.5em;
+  display: flex;
+  align-items: center;
+}
+.field__submit {
+  cursor: pointer;
+}
+.field__valid {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: green;
+  margin-bottom: 1em;
 }
 
 .location {

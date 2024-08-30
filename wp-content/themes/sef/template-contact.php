@@ -1,6 +1,8 @@
 <?php /* Template Name: "Contact" */ ?>
 
-<?php get_header() ?>
+<?php use inc\ContactForm;
+
+get_header() ?>
 
 <main>
     <section class="contact">
@@ -27,35 +29,42 @@
             ?>
             <form class="form" action="<?= esc_url(admin_url('admin-post.php')); ?>" method="post">
                 <?php if ($feedback) : ?>
-                    <p class="field__valid"><?= $feedback ?></p>
+                    <p class="field__valid icon-checkmark" data-animation="show-up"><?= $feedback ?></p>
                 <?php endif; ?>
                 <div class="field__container">
                     <label class="field__label" for="fullname" data-required="true">Nom complet</label>
                     <input class="field__input" type="text" name="fullname" id="fullname" placeholder="Jon Doe" value="<?= $_SESSION['old']['fullname'] ?? '' ?>">
                     <?php if ($_SESSION['errors']['fullname'] ?? null): ?>
-                        <p class="field__error"><?= $_SESSION['errors']['fullname'] ?></p>
+                        <p class="field__error icon-notification"><?= $_SESSION['errors']['fullname'] ?></p>
                     <?php endif; ?>
                 </div>
                 <div class="field__container">
                     <label class="field__label" for="email" data-required="true">Adresse mail</label>
                     <input class="field__input" type="email" name="email" id="email" placeholder="jon.doe@exemple.be" value="<?= $_SESSION['old']['email'] ?? '' ?>">
                     <?php if ($_SESSION['errors']['email'] ?? null): ?>
-                        <p class="field__error"><?= $_SESSION['errors']['email'] ?></p>
+                        <p class="field__error icon-notification"><?= $_SESSION['errors']['email'] ?></p>
                     <?php endif; ?>
                 </div>
                 <div class="field__container">
                     <label class="field__label" for="subject" data-required="true">Sujet</label>
                     <input class="field__input" type="text" name="subject" id="subject" placeholder="Bénévolats, question, dons..." value="<?= $_SESSION['old']['subject'] ?? '' ?>">
                     <?php if ($_SESSION['errors']['subject'] ?? null): ?>
-                        <p class="field__error"><?= $_SESSION['errors']['subject'] ?></p>
+                        <p class="field__error icon-notification"><?= $_SESSION['errors']['subject'] ?></p>
                     <?php endif; ?>
                 </div>
                 <div class="field__container">
                     <label class="field__label" for="message" data-required="true">Message</label>
                     <textarea class="field__textarea" name="message" id="message" cols="30"
-                              rows="10" placeholder="Ici votre message..."><?= $_SESSION['old']['email'] ?? '' ?></textarea>
+                              rows="10" placeholder="Ici votre message..."><?= $_SESSION['old']['message'] ?? '' ?></textarea>
                     <?php if ($_SESSION['errors']['message'] ?? null): ?>
-                        <p class="field__error"><?= $_SESSION['errors']['message'] ?></p>
+                        <p class="field__error icon-notification"><?= $_SESSION['errors']['message'] ?></p>
+                    <?php endif; ?>
+                </div>
+                <div class="field__container field__container--full" data-animation="show-up">
+                    <div class="g-recaptcha field__label" data-sitekey="6LdCETIqAAAAAAibJwd6f2qJho-zRNOFmGSK4zYX">
+                    </div>
+                    <?php if ($_SESSION['errors']['g-recaptcha-response'] ?? null): ?>
+                        <p class="field__error icon-notification"><?= $_SESSION['errors']['g-recaptcha-response'] ?></p>
                     <?php endif; ?>
                 </div>
                 <input type="hidden" name="action" value="custom_contact_form">

@@ -1,8 +1,15 @@
 <?php
 
+use inc\ContactForm;
+
 function dw_get_canonical_url(): string
 {
     return empty($_SERVER['HTTPS']) ? 'http://' . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'] : 'https://' . $_SERVER["HTTP_HOST"] . $_SERVER['REQUEST_URI'];
+}
+
+function dw_contact_form_controller(): void
+{
+    new ContactForm($_POST);
 }
 
 function dw_is_active(string $path): string
@@ -56,11 +63,6 @@ function dw_og_page_title(): void
     }
 }
 
-function dw_contact_form_controller(): void
-{
-    new ContactForm($_POST);
-}
-
 function load_scripts(): void
 {
     wp_enqueue_script('main', get_template_directory_uri() . '/public/js/main.js', [], false, [
@@ -77,3 +79,12 @@ add_action('wp_default_scripts', function ($scripts) {
         $scripts->registered['jquery']->deps = array_diff($scripts->registered['jquery']->deps, ['jquery-migrate']);
     }
 });
+
+function load_recaptcha(): void
+{
+    wp_enqueue_script('recaptcha', 'https://www.google.com/recaptcha/api.js', [], false, [
+        'strategy' => 'defer'
+    ]);
+}
+
+add_action('wp_enqueue_scripts', 'load_recaptcha');

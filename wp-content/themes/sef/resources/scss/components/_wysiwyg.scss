@@ -28,3 +28,50 @@
   }
 }
 
+[data-tag="wysiwyg-post"] {
+  * {
+    text-align: left;
+  }
+
+  ul {
+    list-style: initial;
+    padding: 0 0.5em;
+    margin-left: 1em;
+  }
+
+  li {
+    margin: 1em 0;
+  }
+
+  p {
+    margin-bottom: 1.8em;
+  }
+
+  h2, h3, h4, h5, h6 {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0.6em;
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+  img {
+    max-width: 450px;
+    height: auto;
+    float: left;
+    margin: 1rem 1rem 1rem 0;
+
+    &:nth-child(even) {
+      float: right;
+      margin: 1rem 0 1rem 1rem;
+    }
+  }
+
+  a {
+    text-decoration: underline;
+    opacity: 0.8;
+  }
+}
+

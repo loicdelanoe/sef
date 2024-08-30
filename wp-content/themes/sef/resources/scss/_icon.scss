@@ -23,10 +23,18 @@
 .icon-location:before {
   content: "\e947";
 }
-.icon-facebook:before {
-  content: "\ea90";
+.icon-notification:before {
+  content: "\ea08";
 }
-
+.icon-checkmark:before {
+  content: "\ea10";
+}
 .icon-arrow-up-right2:before {
   content: "\ea3b";
+}
+.icon-arrow-right2:before {
+  content: "\ea3c";
+}
+.icon-facebook:before {
+  content: "\ea90";
 }

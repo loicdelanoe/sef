@@ -4,7 +4,7 @@
         <?php while (have_posts()) : the_post(); ?>
             <section class="article">
                 <h2 class="article__title" data-animation="show-up"><?= get_the_title() ?></h2>
-                <?= wp_get_attachment_image(get_field('image'), 'full', false, [
+                <?= wp_get_attachment_image(get_post_thumbnail_id(), 'full', false, [
                     'class' => 'article__image',
                     'data-animation' => 'show-up'
                 ]) ?>
@@ -12,8 +12,8 @@
                     <p class="article__author">Par <?= get_the_author() ?>,</p>
                     <time class="article__date" datetime="<?= the_time('Y-m-d') ?>">Le <?= get_the_date() ?></time>
                     <h3 class="sro">Contenu de l'article</h3>
-                    <div class="article__content" data-tag="wysiwyg">
-                        <?= get_field('content') ?>
+                    <div class="article__content" data-tag="wysiwyg-post">
+                        <?= the_content()?>
                     </div>
                 </article>
             </section>
@@ -34,7 +34,7 @@
                 if ($posts->have_posts()): while ($posts->have_posts()): $posts->the_post(); ?>
                     <article class="newscard" data-animation="show-up">
                         <div class="newscard__container">
-                            <?= wp_get_attachment_image(get_field('image'), 'full', false, [
+                            <?= wp_get_attachment_image(get_post_thumbnail_id(), 'full', false, [
                                 'class' => 'newscard__img'
                             ]) ?>
                             <h3 class="newscard__title"><?= get_the_title() ?></h3>

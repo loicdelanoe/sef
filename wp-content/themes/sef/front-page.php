@@ -35,7 +35,7 @@
                 <article class="newscard--last" itemprop="publishingPrinciples" itemscope
                          itemtype="https://schema.org/Article" data-animation="show-up">
                     <div class="newscard__container--last">
-                        <?= wp_get_attachment_image(get_field('image'), 'full', false, [
+                        <?= wp_get_attachment_image(get_post_thumbnail_id(), 'full', false, [
                             'class' => 'newscard__img--last'
                         ]) ?>
                         <div class="news__container--info">
@@ -62,7 +62,7 @@
                     <article class="newscard" itemprop="publishingPrinciples" itemscope
                              itemtype="https://schema.org/Article" data-animation="show-up">
                         <div class="newscard__container">
-                            <?= wp_get_attachment_image(get_field('image'), 'full', false, [
+                            <?= wp_get_attachment_image(get_post_thumbnail_id(), 'full', false, [
                                 'class' => 'newscard__img'
                             ]) ?>
                             <h3 class="newscard__title" itemprop="headline"><?= get_the_title() ?></h3>
