@@ -30,7 +30,6 @@
             <img src="<?= is_front_page() ? dw_asset('img/sef-logo-alt.svg') : dw_asset('img/sef-logo.svg') ?>"
                  alt="Logo de l'asbl SEF" width="70" height="41">
         </div>
-        <?= is_home() ?>
         <input type="checkbox" name="burger" id="burger" tabindex="0">
         <label class="burger" for="burger">
             <span class="sro">Menu</span>

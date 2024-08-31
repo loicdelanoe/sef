@@ -2,16 +2,9 @@
   position: relative;
   margin-bottom: 1em;
 
-  &--last {
-    position: relative;
-    margin-bottom: 1.5em;
-  }
-
-  &__container {
-    position: relative;
-    overflow: hidden;
-
-    &--last {
+  &:first-child {
+    .newscard__container {
+      color: $alt-text-color;
       position: relative;
       height: 400px;
 
@@ -20,23 +13,43 @@
         border-radius: 10px;
       }
     }
-  }
 
-  &__img {
-    width: 100%;
-    min-height: 159px;
-    max-height: 213px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 0.6em;
+    .news__container--info {
+      position: absolute;
+      bottom: 0;
+      padding: 1.3rem;
+      color: $alt-text-color;
+    }
 
-    &--last {
+    .newscard__img {
       width: 100%;
-      max-height: 30rem;
+      max-height: 100%;
       height: 100%;
       object-fit: cover;
       border-radius: 10px;
     }
+
+    .newscard__title {
+      font-size: 1.4em;
+      margin-bottom: 0.5em;
+      text-overflow: initial;
+      max-width: 35rem;
+      white-space: wrap;
+      overflow: visible;
+    }
+  }
+
+  &__container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 0.6em;
   }
 
   &__title {
@@ -45,11 +58,6 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-
-    &--last {
-      font-size: 1.4em;
-      margin-bottom: 0.5em;
-    }
   }
 
   &__link {
@@ -74,32 +82,36 @@
   }
 }
 
-@media screen and (min-width: $laptop) {
+@media screen and (min-width: $tablet) {
   .newscard {
-    &--last {
-      position: relative;
-      margin-bottom: 0;
-    }
+    margin-bottom: 0;
 
-    &__title {
-      max-width: 277px;
-      &--last {
+    &:first-child {
+      .news__container--grid-4 & {
+        grid-column: span 3;
+      }
+
+      .news__container--grid & {
+        grid-column: span 2;
+        grid-row: span 2
+      }
+
+      .newscard__container {
+        height: 100%;
+      }
+
+      .news__container--info {
+        max-width: 35rem;
+      }
+
+      .newscard__title {
         font-size: 2.4em;
         margin-bottom: 0.3em;
       }
     }
 
-    &__container {
-      &--last {
-        height: 100%;
-      }
-    }
-
-    &__img {
-      &--last {
-        height: 100%;
-        max-height: none;
-      }
+    &__title {
+      max-width: 277px;
     }
   }
 }

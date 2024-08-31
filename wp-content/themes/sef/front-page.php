@@ -21,56 +21,17 @@
                 </h2>
                 <a class="cta" href="<?= home_url('actualite') ?>" data-animation="show-up">Voir plus</a>
             </div>
-            <?php
-            $last_post = new WP_Query([
-                'post_type' => 'post',
-                'post_status' => 'publish',
-                'numberposts' => 1,
-                'posts_per_page' => 1,
-                'orderby' => 'date',
-                'order' => 'DESC',
-            ]);
-
-            if ($last_post->have_posts()): while ($last_post->have_posts()): $last_post->the_post(); ?>
-                <article class="newscard--last" itemprop="publishingPrinciples" itemscope
-                         itemtype="https://schema.org/Article" data-animation="show-up">
-                    <div class="newscard__container--last">
-                        <?= wp_get_attachment_image(get_post_thumbnail_id(), 'full', false, [
-                            'class' => 'newscard__img--last'
-                        ]) ?>
-                        <div class="news__container--info">
-                            <h3 class="newscard__title--last" itemprop="headline"><?= get_the_title() ?></h3>
-                            <p class="newscard__date--last"><?= get_the_date() ?></p>
-                        </div>
-                    </div>
-                    <a class="newscard__link newscard__link--last" href="<?= get_permalink() ?>"><span
-                                class="newscard__view icon-arrow-right2">Voir l'article</span></a>
-                </article>
-            <?php endwhile; endif;
-            wp_reset_postdata(); ?>
             <div class="news__container--grid">
                 <?php
                 $posts = new WP_Query([
                     'post_type' => 'post',
                     'post_status' => 'publish',
-                    'offset' => 1,
                     'orderby' => 'date',
                     'order' => 'DESC',
                 ]);
 
                 if ($posts->have_posts()): while ($posts->have_posts()): $posts->the_post(); ?>
-                    <article class="newscard" itemprop="publishingPrinciples" itemscope
-                             itemtype="https://schema.org/Article" data-animation="show-up">
-                        <div class="newscard__container">
-                            <?= wp_get_attachment_image(get_post_thumbnail_id(), 'full', false, [
-                                'class' => 'newscard__img'
-                            ]) ?>
-                            <h3 class="newscard__title" itemprop="headline"><?= get_the_title() ?></h3>
-                            <p class="newscard__date--last"><?= get_the_date() ?></p>
-                        </div>
-                        <a class="newscard__link" href="<?= get_permalink() ?>"><span
-                                    class="sro">Visiter l'article</span></a>
-                    </article>
+                    <?= get_template_part('parts/section', 'news') ?>
                 <?php endwhile; endif;
                 wp_reset_postdata(); ?>
             </div>
