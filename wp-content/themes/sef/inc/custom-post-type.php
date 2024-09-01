@@ -26,7 +26,7 @@ function create_stats()
         'public' => true,
         'hierarchical' => false,
         'menu_position' => 6,
-        'menu_icon' => 'dashicons-groups',
+        'menu_icon' => 'dashicons-chart-line',
         'has_archive' => false,
         'rewrite' => [
             'slug' => 'temoignages',

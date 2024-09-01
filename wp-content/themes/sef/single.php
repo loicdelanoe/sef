@@ -10,17 +10,17 @@
                 ]) ?>
                 <article class="article__container" data-animation="show-up">
                     <p class="article__author">Par <?= get_the_author() ?>,</p>
-                    <time class="article__date" datetime="<?= the_time('Y-m-d') ?>">Le <?= get_the_date() ?></time>
+                    <time class="article__date" datetime="<?php the_time('Y-m-d') ?>">Le <?= get_the_date() ?></time>
                     <h3 class="sro">Contenu de l'article</h3>
                     <div class="article__content" data-tag="wysiwyg-post">
-                        <?= the_content()?>
+                        <?php the_content()?>
                     </div>
                 </article>
             </section>
         <?php endwhile; ?>
         <section class="other">
             <h2 class="other__title" data-animation="show-up">Autres articles</h2>
-            <div class="container__grid  news__container--grid-4">
+            <div class="container__grid  news__container--grid-4 single">
                 <?php
                 $posts = new WP_Query([
                     'post_type' => 'post',
@@ -32,16 +32,7 @@
                 ]);
 
                 if ($posts->have_posts()): while ($posts->have_posts()): $posts->the_post(); ?>
-                    <article class="newscard" data-animation="show-up">
-                        <div class="newscard__container">
-                            <?= wp_get_attachment_image(get_post_thumbnail_id(), 'full', false, [
-                                'class' => 'newscard__img'
-                            ]) ?>
-                            <h3 class="newscard__title"><?= get_the_title() ?></h3>
-                        </div>
-                        <a class="newscard__link" href="<?= get_permalink() ?>"><span
-                                    class="sro">Visiter l'article</span></a>
-                    </article>
+                    <?= get_template_part('parts/section', 'news-bis') ?>
                 <?php endwhile; endif; ?>
             </div>
         </section>

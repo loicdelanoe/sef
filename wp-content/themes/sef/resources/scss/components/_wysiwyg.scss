@@ -7,14 +7,19 @@
     list-style: initial;
     padding: 0 0.5em;
     margin-left: 1em;
+    margin-bottom: 1em;
   }
 
   li {
+
+    &:first-child {
+      margin-top: 0;
+    }
     margin: 1em 0;
   }
 
   p {
-    margin-bottom: 1.8em;
+    margin-bottom: 1.4em;
   }
 
   h2, h3, h4, h5, h6 {
@@ -25,6 +30,10 @@
 
   h3 {
     font-size: 1.3em;
+  }
+
+  em {
+    font-style: italic;
   }
 }
 
@@ -72,6 +81,10 @@
   a {
     text-decoration: underline;
     opacity: 0.8;
+  }
+
+  em {
+    font-style: italic;
   }
 }
 

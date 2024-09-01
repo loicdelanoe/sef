@@ -28,6 +28,16 @@
     &__content {
       order: 1;
     }
+
+    &__container {
+      &--img {
+        height: 100%;
+      }
+    }
+
+    &__image {
+      height: 100%;
+    }
   }
 }
 

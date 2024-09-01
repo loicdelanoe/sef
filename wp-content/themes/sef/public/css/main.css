@@ -355,12 +355,16 @@ img {
   list-style: initial;
   padding: 0 0.5em;
   margin-left: 1em;
+  margin-bottom: 1em;
 }
 [data-tag=wysiwyg] li {
   margin: 1em 0;
 }
+[data-tag=wysiwyg] li:first-child {
+  margin-top: 0;
+}
 [data-tag=wysiwyg] p {
-  margin-bottom: 1.8em;
+  margin-bottom: 1.4em;
 }
 [data-tag=wysiwyg] h2, [data-tag=wysiwyg] h3, [data-tag=wysiwyg] h4, [data-tag=wysiwyg] h5, [data-tag=wysiwyg] h6 {
   margin-left: 0;
@@ -369,6 +373,9 @@ img {
 }
 [data-tag=wysiwyg] h3 {
   font-size: 1.3em;
+}
+[data-tag=wysiwyg] em {
+  font-style: italic;
 }
 
 [data-tag=wysiwyg-post] * {
@@ -406,6 +413,9 @@ img {
 [data-tag=wysiwyg-post] a {
   text-decoration: underline;
   opacity: 0.8;
+}
+[data-tag=wysiwyg-post] em {
+  font-style: italic;
 }
 
 .bg {
@@ -1483,6 +1493,12 @@ input[id=burger]:checked ~ .burger .burger__line:nth-child(3) {
   .material__content, .material__image {
     margin: 0;
   }
+  .material__container--img {
+    height: 100%;
+  }
+  .material__image {
+    height: 100%;
+  }
 }
 @media screen and (min-width: 1024px) {
   .material {
@@ -1524,6 +1540,12 @@ input[id=burger]:checked ~ .burger .burger__line:nth-child(3) {
   }
   .financial__content {
     order: 1;
+  }
+  .financial__container--img {
+    height: 100%;
+  }
+  .financial__image {
+    height: 100%;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1841,8 +1863,59 @@ input[id=burger]:checked ~ .burger .burger__line:nth-child(3) {
 .other {
   display: flex;
   flex-direction: column;
+  padding-top: 0;
 }
 
+.othercard {
+  position: relative;
+  margin-bottom: 1em;
+}
+.othercard__container {
+  position: relative;
+  overflow: hidden;
+}
+.othercard__img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.6em;
+}
+.othercard__title {
+  position: relative;
+  font-size: 1.2em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.othercard__link {
+  position: absolute;
+  inset: 0;
+}
+.othercard__view {
+  color: #FFF9F7;
+  position: absolute;
+  bottom: 1.3rem;
+  right: 1.3rem;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.othercard__view:before {
+  margin-left: 0.5rem;
+  margin-right: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .othercard {
+    margin-bottom: 0;
+  }
+  .othercard__title {
+    max-width: 277px;
+  }
+}
 .articles {
   display: flex;
   flex-direction: column;

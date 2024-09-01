@@ -11,6 +11,7 @@ require_once(get_template_directory() . '/inc/helpers.php');
 require_once(get_template_directory() . '/inc/clean-header.php');
 require_once(get_template_directory() . '/inc/sidebar.php');
 require_once(get_template_directory() . '/inc/custom-post-type.php');
+require_once(get_template_directory() . '/inc/remove-menu.php');
 
 // Handle contact form submit
 add_action('admin_post_custom_contact_form', 'dw_contact_form_controller');

@@ -14,7 +14,7 @@
             <?= get_field('material_text') ?>
             <a href="<?= home_url('/magasins') ?>" class="cta material__cta">Nos magasins</a>
         </div>
-        <div class="img__container" data-variant="right">
+        <div class="img__container material__container--img" data-variant="right">
             <?= wp_get_attachment_image(get_field('material_image'), 'full', false, [
                 'class' => 'material__image',
                 'data-animation' => 'show-up'
@@ -27,7 +27,7 @@
             <div class="financial__content" data-tag="wysiwyg" itemprop="description" data-animation="show-up">
                 <?= get_field('financial_text') ?>
             </div>
-            <div class="img__container" data-variant="alt">
+            <div class="img__container financial__container--img" data-variant="alt">
                 <?= wp_get_attachment_image(get_field('financial_image'), 'full', false, [
                     'class' => 'financial__image',
                     'data-animation' => 'show-up'
